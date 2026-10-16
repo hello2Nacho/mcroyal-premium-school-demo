@@ -1,0 +1,415 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 4: ABOUT MC ROYAL / INSTITUTIONAL OVERVIEW
+   Visual Direction: Editorial, prestigious, human, warm, and institutional.
+   Layout: Asymmetric editorial grid, architectural photography framing,
+           refined hairline pillar grid, zero SaaS clutter.
+   ========================================================================== */
+
+.about-section {
+  position: relative;
+  background-color: #FFFFFF;
+  padding-top: clamp(88px, 10vw, 140px);
+  padding-bottom: clamp(88px, 10vw, 140px);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+/* Subtle architectural ambient texture */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(circle at 100% 0%, rgba(107, 62, 140, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+}
+
+/* -------------------------------------------------------------------------
+   1. DESKTOP ASYMMETRIC EDITORIAL GRID (1440px)
+   ------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(48px, 6vw, 96px);
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------
+   2. LEFT COLUMN — EDITORIAL NARRATIVE & INSTITUTIONAL PILLARS
+   ------------------------------------------------------------------------- */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Category Eyebrow */
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-600); /* Royal Purple */
+  margin-bottom: var(--space-4);
+}
+
+.about-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-600);
+}
+
+/* Primary Display Heading */
+.about-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.4vw, 3.125rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  color: #0F172A; /* Deep Slate */
+  margin: 0 0 var(--space-5) 0;
+}
+
+/* Supporting Institutional Narrative */
+.about-narrative {
+  font-family: var(--font-family-sans);
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.72;
+  color: #475569;
+  margin: 0 0 var(--space-6) 0;
+  max-width: 580px;
+}
+
+/* Institutional Motto Micro-Label */
+.about-motto-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  background-color: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-8);
+}
+
+.about-motto-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #C99738; /* Regal Gold */
+  flex-shrink: 0;
+}
+
+.about-motto-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #334155;
+}
+
+/* -------------------------------------------------------------------------
+   3. FOUR INSTITUTIONAL PILLARS (Refined Hairline Sequence)
+   ------------------------------------------------------------------------- */
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  margin-bottom: var(--space-8);
+}
+
+.about-pillar-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: 16px 4px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  transition: padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-pillar-item:hover {
+  padding-left: 8px;
+  background-color: rgba(107, 62, 140, 0.015);
+}
+
+.about-pillar-num {
+  font-family: var(--font-family-display);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600); /* Royal Purple */
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.about-pillar-title {
+  font-family: var(--font-family-display);
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.35;
+  color: #0F172A;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.about-pillar-item:hover .about-pillar-title {
+  color: #4C2665;
+}
+
+/* -------------------------------------------------------------------------
+   4. EDITORIAL CTA LINK
+   ------------------------------------------------------------------------- */
+.about-cta-wrap {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.about-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--color-primary-600);
+  color: #FFFFFF;
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(107, 62, 140, 0.25);
+  transition: background-color var(--transition-base),
+              transform var(--transition-fast),
+              box-shadow var(--transition-base);
+}
+
+.about-cta-link:hover {
+  background-color: var(--color-primary-500);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(107, 62, 140, 0.35);
+}
+
+.about-cta-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.about-cta-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* -------------------------------------------------------------------------
+   5. RIGHT COLUMN — ARCHITECTURAL PHOTOGRAPHIC FRAME
+   ------------------------------------------------------------------------- */
+.about-visual {
+  position: relative;
+  width: 100%;
+}
+
+.about-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.12),
+              0 0 0 1px rgba(15, 23, 42, 0.05);
+  background-color: #F1F5F9;
+}
+
+.about-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-visual:hover .about-image-frame img {
+  transform: scale(1.02);
+}
+
+/* Floating Institutional Badge */
+.about-image-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  color: #FFFFFF;
+}
+
+.about-badge-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent-400); /* Gold */
+  flex-shrink: 0;
+}
+
+.about-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-badge-label {
+  font-family: var(--font-family-display);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.about-badge-sub {
+  font-family: var(--font-family-sans);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-regular);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* -------------------------------------------------------------------------
+   6. TABLET RESPONSIVE ADAPTATION (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about-heading {
+    font-size: 2.375rem;
+  }
+
+  .about-narrative {
+    max-width: 100%;
+    font-size: 1.0625rem;
+  }
+
+  .about-image-frame {
+    aspect-ratio: 16 / 10;
+    max-height: 480px;
+  }
+
+  .about-image-badge {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   7. MOBILE RESPONSIVE ADAPTATION (390px / <= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .about-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .about-eyebrow {
+    font-size: 0.6875rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .about-heading {
+    font-size: 1.875rem;
+    line-height: 1.18;
+    margin-bottom: var(--space-4);
+  }
+
+  .about-narrative {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+  }
+
+  .about-motto-tag {
+    margin-bottom: var(--space-6);
+  }
+
+  .about-image-frame {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-lg);
+  }
+
+  .about-image-badge {
+    display: none; /* Keep mobile clean and uncluttered */
+  }
+
+  .about-pillars {
+    margin-bottom: var(--space-6);
+  }
+
+  .about-pillar-item {
+    padding: 12px 0;
+  }
+
+  .about-pillar-num {
+    font-size: 0.875rem;
+  }
+
+  .about-pillar-title {
+    font-size: 0.9375rem;
+  }
+
+  .about-cta-wrap {
+    width: 100%;
+  }
+
+  .about-cta-link {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    font-size: 0.9375rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   8. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .about-pillar-item,
+  .about-cta-link,
+  .about-cta-link svg,
+  .about-image-frame img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

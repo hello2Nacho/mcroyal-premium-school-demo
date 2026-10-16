@@ -1,0 +1,236 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 12: OUR COLLEGE / PRIMARY & KINDERGARTEN
+   Visual Direction: Warm, gentle, nurturing. Back to white after the dark
+           Graduation band.
+   Layout: Copy left; an overlapping two-photo collage right (tall
+           kindergarten portrait + landscape primary photo stepping over it).
+   ========================================================================== */
+
+.early-years-section {
+  position: relative;
+  background-color: #FFFFFF;
+  padding-top: clamp(88px, 10vw, 140px);
+  padding-bottom: clamp(88px, 10vw, 140px);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+.early-years-container {
+  max-width: var(--container-max-width);
+}
+
+.early-years-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(48px, 7vw, 112px);
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------
+   1. COPY
+   ------------------------------------------------------------------------- */
+.early-years-content {
+  min-width: 0;
+}
+
+.early-years-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-4);
+}
+
+.early-years-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-600);
+}
+
+.early-years-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.6vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+  margin: 0 0 var(--space-6) 0;
+  text-wrap: balance;
+}
+
+.early-years-content p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+  max-width: 520px;
+}
+
+.early-years-content .early-years-lead {
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  line-height: 1.72;
+  color: #334155;
+}
+
+.early-years-content p + p {
+  margin-top: var(--space-5);
+}
+
+/* -------------------------------------------------------------------------
+   2. COLLAGE
+   ------------------------------------------------------------------------- */
+.early-years-collage {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 14%; /* room for the stepped primary photo */
+}
+
+.early-years-photo {
+  margin: 0;
+  overflow: hidden;
+  background-color: #F1F5F9;
+}
+
+.early-years-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.early-years-photo:hover img {
+  transform: scale(1.02);
+}
+
+.early-years-photo--kg {
+  position: relative;
+  width: 58%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+}
+
+.early-years-photo--primary {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 24px 48px -20px rgba(15, 23, 42, 0.25);
+}
+
+/* Small restrained labels inside each photo */
+.early-years-photo figcaption {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 6px 12px;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-sans);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------------
+   3. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .early-years-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .early-years-heading {
+    font-size: 2.75rem;
+  }
+
+  .early-years-content p {
+    max-width: 640px;
+  }
+
+  .early-years-collage {
+    max-width: 640px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   4. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .early-years-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .early-years-grid {
+    gap: var(--space-10);
+  }
+
+  .early-years-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .early-years-heading {
+    font-size: 2.125rem;
+    margin-bottom: var(--space-5);
+  }
+
+  .early-years-content .early-years-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .early-years-content p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .early-years-collage {
+    padding-bottom: 18%;
+  }
+
+  .early-years-photo--kg {
+    width: 66%;
+    border-radius: var(--radius-lg);
+  }
+
+  .early-years-photo--primary {
+    width: 64%;
+    border-width: 5px;
+    border-radius: var(--radius-lg);
+  }
+
+  .early-years-photo figcaption {
+    left: 10px;
+    bottom: 10px;
+    padding: 4px 10px;
+    font-size: 0.625rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .early-years-photo img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

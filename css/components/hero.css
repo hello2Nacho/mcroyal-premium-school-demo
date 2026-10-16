@@ -1,0 +1,323 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - HERO SECTION COMPONENT (Refined)
+   Design Direction: Photography-led, Editorial, Prestigious & Restrained
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  background-color: var(--color-bg-body);
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-10);
+  overflow: hidden;
+}
+
+/* Subtle architectural gradient for warmth */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(circle at 75% 25%, rgba(107, 62, 140, 0.04) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  gap: var(--space-10);
+  min-height: calc(82vh - 124px);
+}
+
+/* -------------------------------------------------------------------------
+   1. HERO CONTENT (Left Column on Desktop)
+   ------------------------------------------------------------------------- */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 580px;
+}
+
+/* Category & Educational Tier Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 5px var(--space-3);
+  background-color: var(--color-primary-50);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-600);
+}
+
+.hero-badge-text {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-primary-700);
+}
+
+/* Primary Display Headline */
+.hero-headline {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 4.2vw, 3.35rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.12;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-4);
+}
+
+.hero-headline-highlight {
+  color: var(--color-primary-600);
+  position: relative;
+  display: inline-block;
+}
+
+/* Concise Supporting Copy */
+.hero-lead {
+  font-size: clamp(1.0625rem, 1.25vw, 1.1875rem);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-7);
+  max-width: 520px;
+}
+
+/* Primary & Secondary Action CTAs */
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  margin-bottom: var(--space-7);
+}
+
+.hero-cta-primary {
+  min-height: 50px;
+  padding: 0 var(--space-6);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(107, 62, 140, 0.16);
+}
+
+.hero-cta-primary:hover {
+  background-color: var(--color-primary-700);
+  box-shadow: 0 4px 12px rgba(107, 62, 140, 0.25);
+  transform: translateY(-1px);
+}
+
+.hero-cta-secondary {
+  min-height: 50px;
+  padding: 0 var(--space-6);
+  font-size: 0.9375rem;
+  background-color: var(--color-neutral-0);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-neutral-800);
+}
+
+.hero-cta-secondary:hover {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-primary-600);
+  color: var(--color-primary-600);
+}
+
+/* Verified Context & Trust Strip */
+.hero-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+  width: 100%;
+}
+
+.hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-600);
+}
+
+.hero-trust-item svg {
+  width: 15px;
+  height: 15px;
+  color: var(--color-primary-600);
+  flex-shrink: 0;
+}
+
+.hero-trust-divider {
+  width: 1px;
+  height: 14px;
+  background-color: var(--color-neutral-300);
+}
+
+/* -------------------------------------------------------------------------
+   2. HERO PHOTOGRAPHY CANVAS (Right Column on Desktop)
+   ------------------------------------------------------------------------- */
+.hero-media-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.05);
+  background-color: var(--color-neutral-200);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.hero-image-frame:hover .hero-photo {
+  transform: scale(1.02);
+}
+
+/* -------------------------------------------------------------------------
+   3. TABLET RESPONSIVE ADAPTATION (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .hero-section {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-8);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    min-height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .hero-media-wrapper {
+    order: 2;
+  }
+
+  .hero-image-frame {
+    height: 400px;
+  }
+
+  .hero-lead {
+    max-width: 100%;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   4. MOBILE RESPONSIVE ADAPTATION (390px / <= 767px)
+   Mobile Flow: Image -> Category Label -> Headline -> Lead -> CTAs -> Trust
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-7);
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-media-wrapper {
+    order: 1;
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-image-frame {
+    height: 240px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-photo {
+    object-position: center 20%;
+  }
+
+  .hero-content {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-badge {
+    order: 1;
+    margin-bottom: var(--space-3);
+    align-self: flex-start;
+  }
+
+  .hero-headline {
+    order: 2;
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.18;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-lead {
+    order: 3;
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.55;
+    margin-bottom: var(--space-5);
+  }
+
+  .hero-ctas {
+    order: 4;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .hero-cta-primary,
+  .hero-cta-secondary {
+    width: 100%;
+    min-height: 48px;
+    font-size: 0.9375rem;
+    justify-content: center;
+  }
+
+  .hero-trust-strip {
+    order: 5;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    padding-top: var(--space-3);
+  }
+
+  .hero-trust-divider {
+    display: none;
+  }
+}

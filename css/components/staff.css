@@ -1,0 +1,205 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 9: OUR STAFF
+   Visual Direction: Human, sincere, documentary. Uses the school's real staff
+           photograph (cropped + tone-corrected only), never generated people.
+   Layout: Centred header, a panoramic team photograph, then the narrative
+           in a two-column measure.
+   ========================================================================== */
+
+.staff-section {
+  position: relative;
+  background-color: #FFFFFF;
+  padding-top: clamp(88px, 10vw, 140px);
+  padding-bottom: clamp(88px, 10vw, 140px);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+.staff-container {
+  max-width: var(--container-max-width);
+}
+
+/* -------------------------------------------------------------------------
+   1. CENTRED HEADER
+   ------------------------------------------------------------------------- */
+.staff-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.staff-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-4);
+}
+
+/* Rules on both sides for the centred variant */
+.staff-eyebrow::before,
+.staff-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-600);
+}
+
+.staff-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.4vw, 3.25rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* -------------------------------------------------------------------------
+   2. PANORAMIC PHOTOGRAPH
+   ------------------------------------------------------------------------- */
+/* Capped width: the source is a 1393px scan, so keep upscaling modest */
+.staff-figure {
+  max-width: 1080px;
+  margin: 0 auto clamp(48px, 5vw, 72px);
+}
+
+.staff-figure-frame {
+  aspect-ratio: 1393 / 532;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: #F1F5F9;
+}
+
+.staff-figure-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  display: block;
+}
+
+.staff-figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: var(--space-4);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  color: #64748B;
+}
+
+.staff-caption-rule {
+  width: 24px;
+  height: 1px;
+  background-color: #C99738; /* Regal Gold — sparing accent */
+}
+
+/* -------------------------------------------------------------------------
+   3. NARRATIVE — two-column measure
+   ------------------------------------------------------------------------- */
+.staff-copy {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.staff-copy p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+}
+
+.staff-copy .staff-lead {
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  line-height: 1.72;
+  color: #334155;
+}
+
+/* -------------------------------------------------------------------------
+   4. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .staff-heading {
+    font-size: 2.5rem;
+  }
+
+  .staff-copy {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    max-width: 680px;
+  }
+
+  .staff-copy .staff-lead {
+    font-size: 1.0625rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .staff-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .staff-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .staff-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .staff-heading {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  /* Panorama would be too thin at phone width: crop to the centre group */
+  .staff-figure-frame {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-lg);
+  }
+
+  .staff-figure-frame img {
+    object-position: 48% 20%;
+  }
+
+  .staff-figure {
+    margin-bottom: var(--space-10);
+  }
+
+  .staff-figure figcaption {
+    margin-top: var(--space-3);
+  }
+
+  .staff-copy .staff-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .staff-copy p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}

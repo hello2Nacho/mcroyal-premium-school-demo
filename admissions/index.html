@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions — Begin Your Application</title>
+  <meta name="description" content="Begin an application through the school's online admissions portal (demonstration).">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/typography.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components/admissions-portal.css">
+</head>
+<body class="portal-body">
+
+  <a class="portal-skip" href="#portal-main">Skip to application</a>
+
+  <!-- Demo notice -->
+  <div class="portal-demo-strip" role="note">
+    <span class="portal-demo-tag">Demo</span>
+    <span>This is a demonstration admissions portal. Nothing you enter is sent to a school.</span>
+  </div>
+
+  <!-- =====================================================================
+       PORTAL HEADER
+       ===================================================================== -->
+  <header class="portal-header">
+    <div class="portal-container portal-header-inner">
+      <a href="/" class="portal-brand" data-school-href="websiteUrl">
+        <img src="/assets/images/logo.png" alt="" width="66" height="52" data-school-logo>
+        <span class="portal-brand-text">
+          <span class="portal-brand-name" data-school="name">School</span>
+          <span class="portal-brand-motto" data-school="motto"></span>
+        </span>
+      </a>
+      <div class="portal-header-actions">
+        <span class="portal-header-label">Admissions</span>
+        <a href="/" class="portal-back" data-school-href="websiteUrl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          <span>Back to Website</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="portal-main" class="portal-main" tabindex="-1">
+
+    <noscript>
+      <p class="portal-noscript">The admissions portal needs JavaScript enabled to work.</p>
+    </noscript>
+
+    <!-- ===================================================================
+         SCREEN 1 — LANDING
+         =================================================================== -->
+    <section class="portal-screen portal-landing" data-screen="landing" aria-labelledby="landing-heading" hidden>
+      <div class="portal-container portal-landing-grid">
+        <div class="portal-landing-copy">
+          <span class="portal-eyebrow">Admissions</span>
+          <h1 id="landing-heading" class="portal-landing-heading">Begin Your Application</h1>
+          <p class="portal-landing-lead">Take the first step towards joining a learning community where academic excellence and character development come together.</p>
+
+          <dl class="portal-facts">
+            <div class="portal-fact">
+              <dt>Application for</dt>
+              <dd data-school="admissions.session"></dd>
+            </div>
+            <div class="portal-fact">
+              <dt>Levels</dt>
+              <dd data-school="admissions.levels"></dd>
+            </div>
+            <div class="portal-fact">
+              <dt>Estimated completion</dt>
+              <dd data-school="admissions.estimatedTime"></dd>
+            </div>
+          </dl>
+
+          <!-- Shown when an unfinished demo application is saved in this browser -->
+          <div class="portal-resume" data-resume hidden>
+            <p class="portal-resume-text">You have an application in progress, saved in this browser at <strong data-resume-step></strong>.</p>
+          </div>
+
+          <div class="portal-landing-actions">
+            <button type="button" class="portal-btn portal-btn--primary" data-action="start">
+              <span data-start-label>Start Application</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+            <button type="button" class="portal-btn portal-btn--ghost" data-action="new" data-resume hidden>Start New Application</button>
+            <a href="/" class="portal-btn portal-btn--quiet" data-school-href="websiteUrl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+              <span>Back to Website</span>
+            </a>
+          </div>
+
+          <ol class="portal-outline" aria-label="Application steps">
+            <li><span>01</span>Student</li>
+            <li><span>02</span>Parent / Guardian</li>
+            <li><span>03</span>Academic</li>
+            <li><span>04</span>Documents</li>
+            <li><span>05</span>Review</li>
+          </ol>
+        </div>
+
+        <figure class="portal-landing-visual">
+          <img src="" alt="" width="1536" height="864" data-school-image>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCREEN 2 — MULTI-STEP FORM
+         =================================================================== -->
+    <section class="portal-screen portal-apply" data-screen="form" aria-label="Application form" hidden>
+      <div class="portal-container portal-apply-grid">
+
+        <!-- Progress -->
+        <aside class="portal-progress" aria-label="Application progress">
+          <!-- Compact (mobile / tablet) -->
+          <div class="portal-progress-compact">
+            <p class="portal-progress-count"><span data-progress-count>Step 1 of 5</span><span class="portal-progress-sep" aria-hidden="true">·</span><span data-progress-name>Student</span></p>
+            <div class="portal-progress-bar" aria-hidden="true"><span data-progress-fill></span></div>
+          </div>
+
+          <!-- Full (desktop) -->
+          <ol class="portal-steps">
+            <li><button type="button" class="portal-step" data-goto="1"><span class="portal-step-num">01</span><span class="portal-step-label">Student</span></button></li>
+            <li><button type="button" class="portal-step" data-goto="2"><span class="portal-step-num">02</span><span class="portal-step-label">Parent / Guardian</span></button></li>
+            <li><button type="button" class="portal-step" data-goto="3"><span class="portal-step-num">03</span><span class="portal-step-label">Academic</span></button></li>
+            <li><button type="button" class="portal-step" data-goto="4"><span class="portal-step-num">04</span><span class="portal-step-label">Documents</span></button></li>
+            <li><button type="button" class="portal-step" data-goto="5"><span class="portal-step-num">05</span><span class="portal-step-label">Review</span></button></li>
+          </ol>
+
+          <div class="portal-progress-meta">
+            <p class="portal-saved" data-saved aria-live="polite">Progress is saved in this browser.</p>
+            <button type="button" class="portal-link-btn" data-action="new">Start new application</button>
+          </div>
+        </aside>
+
+        <!-- Steps -->
+        <form class="portal-form" novalidate data-form>
+
+          <!-- STEP 01 — STUDENT -->
+          <fieldset class="portal-step-panel" data-step="1">
+            <legend class="portal-step-legend">
+              <span class="portal-step-eyebrow">Step 01 — Student</span>
+              <span class="portal-step-title" tabindex="-1">Tell us about the student</span>
+            </legend>
+            <p class="portal-step-intro">All fields are required unless marked optional.</p>
+
+            <div class="portal-fields">
+              <div class="field">
+                <label class="field-label" for="f-firstName">First name</label>
+                <input class="field-input" id="f-firstName" name="firstName" type="text" autocomplete="off" data-rule="name" required>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-middleName">Middle name <span class="field-optional">Optional</span></label>
+                <input class="field-input" id="f-middleName" name="middleName" type="text" autocomplete="off" data-rule="name">
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-lastName">Last name</label>
+                <input class="field-input" id="f-lastName" name="lastName" type="text" autocomplete="off" data-rule="name" required>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-dob">Date of birth</label>
+                <input class="field-input" id="f-dob" name="dob" type="date" data-rule="dob" required>
+                <p class="field-help" id="f-dob-help">The student must be between 1 and 20 years old.</p>
+              </div>
+              <div class="field">
+                <span class="field-label" id="f-gender-label">Gender</span>
+                <div class="field-choice-row" role="radiogroup" aria-labelledby="f-gender-label" data-group="gender">
+                  <label class="field-choice"><input type="radio" name="gender" value="Female" required><span>Female</span></label>
+                  <label class="field-choice"><input type="radio" name="gender" value="Male"><span>Male</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-classApplying">Class applying for</label>
+                <select class="field-input field-select" id="f-classApplying" name="classApplying" data-options="classes" data-sync="classApplying" required></select>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-nationality">Nationality</label>
+                <input class="field-input" id="f-nationality" name="nationality" type="text" autocomplete="off" data-rule="text" required>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-currentSchool">Current school <span class="field-optional">Optional</span></label>
+                <input class="field-input" id="f-currentSchool" name="currentSchool" type="text" autocomplete="off" data-rule="text">
+                <p class="field-help" id="f-currentSchool-help">Leave blank if the student is not yet in school.</p>
+              </div>
+              <div class="field field--wide">
+                <span class="field-label">Passport photograph <span class="field-optional">Optional</span></span>
+                <div data-upload-slot="passport" data-compact></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 02 — PARENT / GUARDIAN -->
+          <fieldset class="portal-step-panel" data-step="2" hidden>
+            <legend class="portal-step-legend">
+              <span class="portal-step-eyebrow">Step 02 — Parent / Guardian</span>
+              <span class="portal-step-title" tabindex="-1">Parent or Guardian Details</span>
+            </legend>
+            <p class="portal-step-intro">We&rsquo;ll use these details to contact you about this application.</p>
+
+            <div class="portal-fields">
+              <div class="field">
+                <label class="field-label" for="f-parentName">Full name</label>
+                <input class="field-input" id="f-parentName" name="parentName" type="text" autocomplete="name" data-rule="name" required>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-relationship">Relationship to student</label>
+                <select class="field-input field-select" id="f-relationship" name="relationship" data-options="relationships" required></select>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-phone">Phone number</label>
+                <input class="field-input" id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" data-rule="phone" required>
+                <p class="field-help" id="f-phone-help">For example 0803 000 0000 or +234 803 000 0000.</p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-email">Email address</label>
+                <input class="field-input" id="f-email" name="email" type="email" autocomplete="email" data-rule="email" required>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-address">Residential address</label>
+                <textarea class="field-input field-textarea" id="f-address" name="address" rows="3" autocomplete="street-address" data-rule="address" required></textarea>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-altContact">Alternative contact number <span class="field-optional">Optional</span></label>
+                <input class="field-input" id="f-altContact" name="altContact" type="tel" autocomplete="off" inputmode="tel" data-rule="phone">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 03 — ACADEMIC -->
+          <fieldset class="portal-step-panel" data-step="3" hidden>
+            <legend class="portal-step-legend">
+              <span class="portal-step-eyebrow">Step 03 — Academic</span>
+              <span class="portal-step-title" tabindex="-1">Academic Information</span>
+            </legend>
+            <p class="portal-step-intro">A little about where the student is now and where they&rsquo;d like to begin.</p>
+
+            <div class="portal-fields">
+              <div class="field">
+                <label class="field-label" for="f-currentClass">Current class</label>
+                <select class="field-input field-select" id="f-currentClass" name="currentClass" data-options="currentClass" required></select>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-classApplying3">Class applying for</label>
+                <select class="field-input field-select" id="f-classApplying3" name="classApplying" data-options="classes" data-sync="classApplying" required></select>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-previousSchool">Previous school <span class="field-optional">Optional</span></label>
+                <input class="field-input" id="f-previousSchool" name="previousSchool" type="text" autocomplete="off" data-rule="text">
+                <p class="field-help" id="f-previousSchool-help">If different from the current school.</p>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-entryTerm">Preferred entry session</label>
+                <select class="field-input field-select" id="f-entryTerm" name="entryTerm" data-options="entryTerms" required></select>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-interests">Areas of academic interest <span class="field-optional">Optional</span></label>
+                <input class="field-input" id="f-interests" name="interests" type="text" autocomplete="off" data-rule="text">
+                <p class="field-help" id="f-interests-help">For example: sciences, reading, music, mathematics.</p>
+              </div>
+              <div class="field field--wide">
+                <label class="field-label" for="f-notes">Additional information <span class="field-optional">Optional</span></label>
+                <textarea class="field-input field-textarea" id="f-notes" name="notes" rows="4" maxlength="500" data-rule="text"></textarea>
+                <p class="field-help" id="f-notes-help"><span data-count-for="notes">0</span> / 500 characters</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 04 — DOCUMENTS -->
+          <fieldset class="portal-step-panel" data-step="4" hidden>
+            <legend class="portal-step-legend">
+              <span class="portal-step-eyebrow">Step 04 — Documents</span>
+              <span class="portal-step-title" tabindex="-1">Supporting Documents</span>
+            </legend>
+            <p class="portal-step-intro">Attach what you have available. In this demo, files stay in your browser and are <strong>not uploaded or sent</strong> to the school.</p>
+            <div class="portal-uploads" data-upload-list></div>
+          </fieldset>
+
+          <!-- STEP 05 — REVIEW -->
+          <fieldset class="portal-step-panel" data-step="5" hidden>
+            <legend class="portal-step-legend">
+              <span class="portal-step-eyebrow">Step 05 — Review</span>
+              <span class="portal-step-title" tabindex="-1">Review your application</span>
+            </legend>
+            <p class="portal-step-intro">Check each section carefully. Use Edit to make a change.</p>
+
+            <div class="portal-review" data-review></div>
+
+            <div class="portal-confirm field" data-confirm-field>
+              <label class="portal-confirm-label">
+                <input type="checkbox" name="confirm" id="f-confirm" required>
+                <span class="portal-confirm-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <span>I confirm that the information provided is accurate.</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Step navigation -->
+          <div class="portal-form-nav">
+            <button type="button" class="portal-btn portal-btn--ghost" data-action="back">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+              <span>Back</span>
+            </button>
+            <button type="submit" class="portal-btn portal-btn--primary" data-action="next">
+              <span data-next-label>Continue</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+          <p class="portal-form-status visually-hidden" aria-live="assertive" data-form-status></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCREEN 3 — SUCCESS
+         =================================================================== -->
+    <section class="portal-screen portal-success" data-screen="success" aria-labelledby="success-heading" hidden>
+      <div class="portal-container portal-success-inner">
+        <span class="portal-success-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <span class="portal-eyebrow">Admissions</span>
+        <h1 id="success-heading" class="portal-success-heading" tabindex="-1">Application Received</h1>
+        <p class="portal-success-lead">Thank you for taking the first step towards joining our learning community.</p>
+
+        <dl class="portal-receipt">
+          <div class="portal-receipt-row">
+            <dt>Applicant</dt>
+            <dd data-success="name"></dd>
+          </div>
+          <div class="portal-receipt-row">
+            <dt>Application reference</dt>
+            <dd><span class="portal-ref" data-success="reference"></span><span class="portal-demo-tag portal-demo-tag--inline">Demo reference</span></dd>
+          </div>
+          <div class="portal-receipt-row">
+            <dt>Session</dt>
+            <dd data-success="session"></dd>
+          </div>
+          <div class="portal-receipt-row">
+            <dt>Application status</dt>
+            <dd><span class="portal-status">Received</span></dd>
+          </div>
+        </dl>
+
+        <p class="portal-success-note">This is a demonstration. No email has been sent and nothing has been submitted to a school.</p>
+
+        <div class="portal-success-actions">
+          <button type="button" class="portal-btn portal-btn--primary" data-action="summary">View Application Summary</button>
+          <a href="/" class="portal-btn portal-btn--ghost" data-school-href="websiteUrl">Return to School Website</a>
+        </div>
+        <button type="button" class="portal-link-btn portal-success-new" data-action="new">Start new application</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCREEN 4 — SUMMARY (read-only, after submission)
+         =================================================================== -->
+    <section class="portal-screen portal-summary" data-screen="summary" aria-labelledby="summary-heading" hidden>
+      <div class="portal-container portal-summary-inner">
+        <div class="portal-summary-head">
+          <div>
+            <span class="portal-eyebrow">Application Summary</span>
+            <h1 id="summary-heading" class="portal-summary-heading" tabindex="-1" data-summary-title></h1>
+            <p class="portal-summary-meta"><span data-summary-ref></span> · <span class="portal-status">Received</span></p>
+          </div>
+          <div class="portal-summary-actions">
+            <button type="button" class="portal-btn portal-btn--ghost" data-action="print">Print</button>
+            <button type="button" class="portal-btn portal-btn--ghost" data-action="back-to-success">Done</button>
+          </div>
+        </div>
+        <div class="portal-review portal-review--readonly" data-summary></div>
+        <button type="button" class="portal-link-btn" data-action="new">Start new application</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    <div class="portal-container portal-footer-inner">
+      <p>&copy; <span data-year></span> <span data-school="name"></span></p>
+      <p>Demonstration admissions experience</p>
+    </div>
+  </footer>
+
+  <!-- Start-new confirmation -->
+  <dialog class="portal-dialog" data-dialog aria-labelledby="dialog-title">
+    <h2 id="dialog-title" class="portal-dialog-title">Start a new application?</h2>
+    <p class="portal-dialog-text">The application saved in this browser will be cleared.</p>
+    <div class="portal-dialog-actions">
+      <button type="button" class="portal-btn portal-btn--ghost" data-dialog-cancel>Keep current</button>
+      <button type="button" class="portal-btn portal-btn--primary" data-dialog-confirm>Start new</button>
+    </div>
+  </dialog>
+
+  <script src="/js/school-config.js"></script>
+  <script src="/js/admissions-portal.js"></script>
+</body>
+</html>

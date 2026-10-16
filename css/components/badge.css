@@ -1,0 +1,61 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - BADGE COMPONENT SYSTEM
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+}
+
+.badge-brand {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+.badge-brand .badge-dot {
+  background-color: var(--color-primary-600);
+}
+
+.badge-accent {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+
+.badge-accent .badge-dot {
+  background-color: var(--color-accent-500);
+}
+
+.badge-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.badge-success .badge-dot {
+  background-color: var(--color-success);
+}
+
+.badge-dark {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.badge-dark .badge-dot {
+  background-color: var(--color-accent-400);
+}

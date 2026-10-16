@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>McRoyal Schools — Lagos | Premier Learning Institution</title>
+  <meta name="description" content="McRoyal Schools in Obawole, Lagos offers a premier educational experience fostering dynamic learning, character refinement, and academic & moral excellence.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Design System & Component Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/badge.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/hero-video.css">
+  <link rel="stylesheet" href="css/components/values.css">
+  <link rel="stylesheet" href="css/components/about.css">
+  <link rel="stylesheet" href="css/components/admissions.css">
+  <link rel="stylesheet" href="css/components/school-life.css">
+  <link rel="stylesheet" href="css/components/curriculum.css">
+  <link rel="stylesheet" href="css/components/environment.css">
+  <link rel="stylesheet" href="css/components/staff.css">
+  <link rel="stylesheet" href="css/components/secondary.css">
+  <link rel="stylesheet" href="css/components/graduation.css">
+  <link rel="stylesheet" href="css/components/early-years.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/demo.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       1. TOP UTILITY BAR (Desktop >= 1024px)
+       ===================================================================== -->
+  <aside class="topbar" aria-label="School contact and quick links">
+    <div class="container topbar-container">
+      <div class="topbar-left">
+        <a href="tel:08035160624" data-demo-message="Calling is disabled in this demo." class="topbar-item" title="Call School Office">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0803 516 0624</span>
+        </a>
+        <span class="topbar-divider" aria-hidden="true"></span>
+        <a href="mailto:info@mcroyalschools.com" data-demo-message="Email is disabled in this demo." class="topbar-item" title="Email Inquiries">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>info@mcroyalschools.com</span>
+        </a>
+        <span class="topbar-divider" aria-hidden="true"></span>
+        <span class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>45 Kajola Road, Iju-Obawole, Lagos</span>
+        </span>
+      </div>
+
+      <div class="topbar-right">
+        <span class="topbar-badge">
+          <span class="topbar-badge-dot" aria-hidden="true"></span>
+          Admissions Open
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       2. GLOBAL SITE HEADER
+       ===================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Official Brand Logo & Identity -->
+        <a href="#" class="brand-link" aria-label="McRoyal Schools Homepage">
+          <img src="assets/images/logo.png" alt="McRoyal Schools Logo" class="brand-logo" width="66" height="52">
+          <div class="brand-text">
+            <span class="brand-title">McRoyal Schools</span>
+            <span class="brand-sub">Excellence Through Learning</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (>= 1024px) -->
+        <nav class="nav-desktop" aria-label="Primary Navigation">
+          
+          <!-- Home -->
+          <div class="nav-item">
+            <a href="#" class="nav-link is-active" aria-current="page">Home</a>
+          </div>
+
+          <!-- About (Dropdown) -->
+          <div class="nav-item">
+            <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-about" data-nav-target="#about">
+              <span>About</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div id="dropdown-about" class="nav-dropdown" role="menu">
+              <a href="#about" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Our Story</span>
+                  <span class="dropdown-desc">Heritage and commitment to excellence</span>
+                </div>
+              </a>
+
+              <a href="#leadership" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Leadership</span>
+                  <span class="dropdown-desc">School administration and educators</span>
+                </div>
+              </a>
+
+              <a href="#philosophy" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">School Philosophy</span>
+                  <span class="dropdown-desc">Learner-friendly total child development</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Academics (Dropdown) -->
+          <div class="nav-item">
+            <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-academics" data-nav-target="#academics">
+              <span>Academics</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div id="dropdown-academics" class="nav-dropdown nav-dropdown-wide" role="menu">
+              <a href="#kindergarten" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Kindergarten</span>
+                  <span class="dropdown-desc">Foundational early childhood learning</span>
+                </div>
+              </a>
+
+              <a href="#primary" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Primary</span>
+                  <span class="dropdown-desc">Inquiry-based foundational education</span>
+                </div>
+              </a>
+
+              <a href="#secondary" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Secondary</span>
+                  <span class="dropdown-desc">College preparation and leadership</span>
+                </div>
+              </a>
+
+              <a href="#curriculum" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Curriculum</span>
+                  <span class="dropdown-desc">Comprehensive academic framework</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- School Life (Dropdown) -->
+          <div class="nav-item">
+            <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-school-life" data-nav-target="#school-life">
+              <span>School Life</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div id="dropdown-school-life" class="nav-dropdown" role="menu">
+              <a href="#activities" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Activities</span>
+                  <span class="dropdown-desc">Co-curricular clubs and development</span>
+                </div>
+              </a>
+
+              <a href="#sports" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Sports</span>
+                  <span class="dropdown-desc">Athletics, fitness and teamwork</span>
+                </div>
+              </a>
+
+              <a href="#music" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Music</span>
+                  <span class="dropdown-desc">Instrumental and musical cultivation</span>
+                </div>
+              </a>
+
+              <a href="#facilities" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v14M21 7v14M6 11h12M6 15h12M9 21v-6h6v6M12 3l9 4H3l9-4Z"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Facilities</span>
+                  <span class="dropdown-desc">Modern classrooms and learning spaces</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Admissions (Dropdown) -->
+          <div class="nav-item">
+            <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-admissions" data-nav-target="#admissions">
+              <span>Admissions</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div id="dropdown-admissions" class="nav-dropdown" role="menu">
+              <a href="#admission-process" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Admission Process</span>
+                  <span class="dropdown-desc">Step-by-step entry requirements</span>
+                </div>
+              </a>
+
+              <a href="/admissions" class="dropdown-item" role="menuitem">
+                <div class="dropdown-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+                <div class="dropdown-content">
+                  <span class="dropdown-title">Apply</span>
+                  <span class="dropdown-desc">Start online application</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </nav>
+
+        <!-- Right Header Actions: Portal (Secondary) & Apply Now (Primary) -->
+        <div class="header-actions">
+          <a href="#portal" data-demo-message="The demo school portal is coming soon." class="btn-portal-header" title="Access Parent & Student Portal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Portal</span>
+          </a>
+
+          <a href="/admissions" class="btn-apply-header" title="Apply for Admission">
+            <span>Apply Now</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+
+          <!-- Mobile / Tablet Hamburger Toggle Button -->
+          <button type="button" class="menu-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-navigation-drawer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       3. MOBILE / TABLET SLIDE-OUT DRAWER NAVIGATION
+       ===================================================================== -->
+  <div class="mobile-scrim" aria-hidden="true"></div>
+
+  <div id="mobile-navigation-drawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Header -->
+    <div class="mobile-drawer-header">
+      <div class="d-flex items-center gap-2">
+        <img src="assets/images/logo.png" alt="McRoyal Schools Logo" class="brand-logo" width="53" height="42">
+        <div class="brand-text">
+          <span class="brand-title" style="font-size: 1.0625rem;">McRoyal Schools</span>
+          <span class="brand-sub" style="font-size: 0.625rem;">Excellence Through Learning</span>
+        </div>
+      </div>
+      
+      <button type="button" class="mobile-drawer-close" aria-label="Close Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links with Accordions -->
+    <div class="mobile-drawer-body">
+      
+      <!-- Mobile Home -->
+      <div class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link is-active">Home</a>
+      </div>
+
+      <!-- Mobile About Accordion -->
+      <div class="mobile-nav-item">
+        <div class="d-flex items-center justify-between">
+          <a href="#about" class="mobile-nav-link flex-1">About</a>
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false" aria-label="Toggle About Submenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-sub-menu">
+          <a href="#about" class="mobile-sub-link">Our Story</a>
+          <a href="#leadership" class="mobile-sub-link">Leadership</a>
+          <a href="#philosophy" class="mobile-sub-link">School Philosophy</a>
+        </div>
+      </div>
+
+      <!-- Mobile Academics Accordion -->
+      <div class="mobile-nav-item">
+        <div class="d-flex items-center justify-between">
+          <a href="#academics" class="mobile-nav-link flex-1">Academics</a>
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false" aria-label="Toggle Academics Submenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-sub-menu">
+          <a href="#kindergarten" class="mobile-sub-link">Kindergarten</a>
+          <a href="#primary" class="mobile-sub-link">Primary</a>
+          <a href="#secondary" class="mobile-sub-link">Secondary</a>
+          <a href="#curriculum" class="mobile-sub-link">Curriculum</a>
+        </div>
+      </div>
+
+      <!-- Mobile School Life Accordion -->
+      <div class="mobile-nav-item">
+        <div class="d-flex items-center justify-between">
+          <a href="#school-life" class="mobile-nav-link flex-1">School Life</a>
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false" aria-label="Toggle School Life Submenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-sub-menu">
+          <a href="#activities" class="mobile-sub-link">Activities</a>
+          <a href="#sports" class="mobile-sub-link">Sports</a>
+          <a href="#music" class="mobile-sub-link">Music</a>
+          <a href="#facilities" class="mobile-sub-link">Facilities</a>
+        </div>
+      </div>
+
+      <!-- Mobile Admissions Accordion -->
+      <div class="mobile-nav-item">
+        <div class="d-flex items-center justify-between">
+          <a href="#admissions" class="mobile-nav-link flex-1">Admissions</a>
+          <button type="button" class="mobile-accordion-toggle" aria-expanded="false" aria-label="Toggle Admissions Submenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-sub-menu">
+          <a href="#admission-process" class="mobile-sub-link">Admission Process</a>
+          <a href="/admissions" class="mobile-sub-link">Apply</a>
+        </div>
+      </div>
+
+      <!-- Mobile Contact -->
+      <div class="mobile-nav-item">
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer CTAs -->
+    <div class="mobile-drawer-footer">
+      <a href="/admissions" class="btn btn-primary btn-lg btn-block">
+        <span>Apply Now</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      <a href="#portal" data-demo-message="The demo school portal is coming soon." class="btn btn-secondary btn-md btn-block">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Portal Login</span>
+      </a>
+
+      <div style="margin-top: var(--space-2); display: flex; flex-direction: column; gap: var(--space-2);">
+        <a href="tel:08035160624" data-demo-message="Calling is disabled in this demo." class="mobile-contact-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0803 516 0624</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       4. PRODUCTION CINEMATIC HERO SECTION
+       ===================================================================== -->
+  <main id="main-content" role="main">
+    <section class="hero-video-section" aria-label="Welcome to McRoyal Schools">
+      
+      <!-- Video & Fallback Backdrop Architecture -->
+      <div class="hero-video-backdrop" aria-hidden="true">
+        <!-- High-Resolution 1080p Hero Video (Autoplay, Muted, Loop, Playsinline, Poster) -->
+        <video class="hero-video-element" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-video-poster.jpg" aria-hidden="true">
+          <source src="assets/videos/mcroyal-hero-1080p.mp4" type="video/mp4">
+        </video>
+        
+        <!-- High-Fidelity Poster Fallback (Active during load / prefers-reduced-motion) -->
+        <div class="hero-poster-fallback" aria-hidden="true"></div>
+
+        <!-- Directional Overlay: Left side strong for typography legibility, right side light for natural school photography -->
+        <div class="hero-video-overlay" aria-hidden="true"></div>
+      </div>
+
+      <!-- Hero Content Container -->
+      <div class="container hero-video-content-wrap">
+        <div class="hero-video-content">
+          
+          <!-- Category Label (Restrained Brand Pill) -->
+          <div class="hero-video-badge">
+            <span class="hero-video-badge-dot" aria-hidden="true"></span>
+            <span class="hero-video-badge-text">NURSERY • PRIMARY • COLLEGE</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero-video-headline">Where <span class="hero-video-headline-highlight">Potential</span> Becomes Purpose.</h1>
+
+          <!-- Concise Supporting Copy -->
+          <p class="hero-video-lead">
+            An inspiring learning environment where academic growth, moral integrity and lifelong confidence come together.
+          </p>
+
+          <!-- Dual Action CTAs -->
+          <div class="hero-video-ctas">
+            <a href="/admissions" class="btn hero-video-cta-primary" title="Start Online Application">
+              <span>Apply Now</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+
+            <a href="#academics" class="btn hero-video-cta-secondary" title="Explore Our Educational Programs">
+              <span>Explore Our School</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Subtle Bottom Scroll Cue -->
+      <a href="#how-we-learn" class="hero-scroll-cue" aria-label="Scroll to explore educational approach">
+        <span class="hero-scroll-text">Scroll to explore</span>
+        <svg class="hero-scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+
+    </section>
+
+    <!-- =====================================================================
+         5. STAGE 3 — CORE VALUE PROPOSITION (HOW WE LEARN)
+         ===================================================================== -->
+    <section id="how-we-learn" class="values-editorial-section" aria-label="Our Educational Approach">
+      <div class="container values-container">
+        
+        <!-- Top Editorial Header -->
+        <div class="values-header">
+          <span class="values-eyebrow">HOW WE LEARN</span>
+          <h2 class="values-heading">
+            A learning environment designed<br class="desktop-br">around the whole child.
+          </h2>
+          <p class="values-lead">
+            At MC Royal Schools, education is structured to nurture the total child — combining academic rigor, personal character, modern learning tools, and individual potential.
+          </p>
+          <div class="values-motto-tag" aria-label="Official School Motto">
+            <span class="values-motto-dot" aria-hidden="true"></span>
+            <span class="values-motto-text">Excellence Through Learning</span>
+          </div>
+        </div>
+
+        <!-- Five Principles — Refined Editorial Sequence -->
+        <div class="values-sequence" role="list">
+          
+          <!-- Principle 01 -->
+          <div class="value-row" role="listitem">
+            <div class="value-bg-watermark" aria-hidden="true">01</div>
+            <div class="value-row-left">
+              <span class="value-index">01</span>
+              <h3 class="value-name">Personalized Learning Paths</h3>
+            </div>
+            <div class="value-row-mid">
+              <p class="value-description">
+                Designed around individual strengths, these learning paths nurture unique growth and help students develop their potential.
+              </p>
+            </div>
+            <div class="value-row-right" aria-hidden="true">
+              <span class="value-arrow-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Principle 02 -->
+          <div class="value-row" role="listitem">
+            <div class="value-bg-watermark" aria-hidden="true">02</div>
+            <div class="value-row-left">
+              <span class="value-index">02</span>
+              <h3 class="value-name">Recognizing Excellence</h3>
+            </div>
+            <div class="value-row-mid">
+              <p class="value-description">
+                Celebrating accomplishments, encouraging ambition and valuing the hard work behind progress.
+              </p>
+            </div>
+            <div class="value-row-right" aria-hidden="true">
+              <span class="value-arrow-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Principle 03 -->
+          <div class="value-row" role="listitem">
+            <div class="value-bg-watermark" aria-hidden="true">03</div>
+            <div class="value-row-left">
+              <span class="value-index">03</span>
+              <h3 class="value-name">Edu Smart</h3>
+            </div>
+            <div class="value-row-mid">
+              <p class="value-description">
+                Using modern tools and resources to support a more effective and intelligent learning experience.
+              </p>
+            </div>
+            <div class="value-row-right" aria-hidden="true">
+              <span class="value-arrow-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Principle 04 -->
+          <div class="value-row" role="listitem">
+            <div class="value-bg-watermark" aria-hidden="true">04</div>
+            <div class="value-row-left">
+              <span class="value-index">04</span>
+              <h3 class="value-name">Knowledge Hub</h3>
+            </div>
+            <div class="value-row-mid">
+              <p class="value-description">
+                A learning space designed to encourage curiosity and connect learners with valuable information.
+              </p>
+            </div>
+            <div class="value-row-right" aria-hidden="true">
+              <span class="value-arrow-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Principle 05 -->
+          <div class="value-row" role="listitem">
+            <div class="value-bg-watermark" aria-hidden="true">05</div>
+            <div class="value-row-left">
+              <span class="value-index">05</span>
+              <h3 class="value-name">Intelli Learn</h3>
+            </div>
+            <div class="value-row-mid">
+              <p class="value-description">
+                An intelligent approach to learning designed to support a more personalized and effective educational experience.
+              </p>
+            </div>
+            <div class="value-row-right" aria-hidden="true">
+              <span class="value-arrow-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. STAGE 4 — ABOUT MC ROYAL / INSTITUTIONAL OVERVIEW
+         ===================================================================== -->
+    <section id="about" class="about-section" aria-label="About McRoyal Schools">
+      <div class="container about-container">
+        <div class="about-grid">
+          
+          <!-- Left Column: Editorial Narrative & Institutional Pillars -->
+          <div class="about-content">
+            <span class="about-eyebrow">ABOUT MC ROYAL SCHOOLS</span>
+            <h2 class="about-heading">Where Academic Excellence Meets Character Development.</h2>
+            
+            <p class="about-narrative">
+              Welcome to MC Royal Schools, where education meets innovation. Our mission is to empower students with the tools and resources they need to excel academically and personally. Our mission is to achieve the child's total development through the pursuit of academic and moral excellence, fostering a learner-friendly environment where every student is encouraged to develop to their full potential.
+            </p>
+
+            <div class="about-motto-tag" aria-label="Official School Motto">
+              <span class="about-motto-dot" aria-hidden="true"></span>
+              <span class="about-motto-text">EXCELLENCE THROUGH LEARNING</span>
+            </div>
+
+            <!-- Four Institutional Pillars -->
+            <div class="about-pillars" role="list" aria-label="Institutional Pillars">
+              <div class="about-pillar-item" role="listitem">
+                <span class="about-pillar-num" aria-hidden="true">01</span>
+                <h3 class="about-pillar-title">Empowering Students for Lifelong Success</h3>
+              </div>
+
+              <div class="about-pillar-item" role="listitem">
+                <span class="about-pillar-num" aria-hidden="true">02</span>
+                <h3 class="about-pillar-title">Fostering Curiosity & Critical Thinking</h3>
+              </div>
+
+              <div class="about-pillar-item" role="listitem">
+                <span class="about-pillar-num" aria-hidden="true">03</span>
+                <h3 class="about-pillar-title">Innovative, Personalized Education</h3>
+              </div>
+
+              <div class="about-pillar-item" role="listitem">
+                <span class="about-pillar-num" aria-hidden="true">04</span>
+                <h3 class="about-pillar-title">Leadership & Social Responsibility</h3>
+              </div>
+            </div>
+
+            <!-- Action CTA -->
+            <div class="about-cta-wrap">
+              <a href="#about" class="about-cta-link" data-demo-message="The full Our Story page is coming soon in this demo." title="Explore Our Story">
+                <span>Explore Our Story</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Architectural Photography Frame -->
+          <div class="about-visual">
+            <div class="about-image-frame">
+              <img src="assets/images/about-mcroyal.jpg" alt="MC Royal students engaged in active learning in modern classroom" loading="lazy" width="600" height="800">
+              
+              <div class="about-image-badge" aria-hidden="true">
+                <svg class="about-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div class="about-badge-text">
+                  <span class="about-badge-label">Nurturing Total Child Development</span>
+                  <span class="about-badge-sub">Obawole, Lagos • Co-educational Excellence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. STAGE 5 — ADMISSIONS / APPLY TO MC ROYAL
+         ===================================================================== -->
+    <section id="admissions" class="admissions-section" aria-labelledby="admissions-heading">
+      <div class="container admissions-container">
+
+        <div class="admissions-grid">
+
+          <!-- Left: Arrival Photograph (bleeds to viewport edge on desktop) -->
+          <figure class="admissions-visual adm-reveal">
+            <div class="admissions-image-frame">
+              <img src="assets/images/admissions-arrival.jpg" alt="Students in MC Royal lilac and gingham uniforms walking across the forecourt toward the school entrance" loading="lazy" width="1536" height="864">
+            </div>
+            <figcaption class="admissions-caption">
+              <span class="admissions-caption-rule" aria-hidden="true"></span>
+              <span>45 Kajola Road, Iju-Obawole, Lagos</span>
+            </figcaption>
+          </figure>
+
+          <!-- Right: Invitation -->
+          <div class="admissions-content adm-reveal">
+            <span class="admissions-eyebrow">Admissions</span>
+            <h2 id="admissions-heading" class="admissions-heading">Begin the Journey to Excellence.</h2>
+
+            <p class="admissions-lead">
+              Are you prepared to advance in your educational journey? Apply to MC Royal today and become part of a community dedicated to excellence, innovation, and personal development.
+            </p>
+            <p class="admissions-support">
+              Our seamless and supportive application process ensures you receive the guidance you need every step of the way.
+            </p>
+
+            <div class="admissions-actions">
+              <a href="/admissions" class="admissions-cta" title="Start your application">
+                <span>Apply to MC Royal</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#admission-process" class="admissions-link">
+                <span>Admission Process</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Four Admission Principles — horizontal numbered sequence -->
+        <ol class="admissions-principles" aria-label="What joining MC Royal means">
+          <li class="admissions-principle adm-reveal">
+            <span class="admissions-principle-num" aria-hidden="true">01</span>
+            <h3 class="admissions-principle-title">The Path to Success</h3>
+            <p class="admissions-principle-text">Unleashing potential through commitment, wisdom, and resilience, shaping a future full of possibilities.</p>
+          </li>
+          <li class="admissions-principle adm-reveal">
+            <span class="admissions-principle-num" aria-hidden="true">02</span>
+            <h3 class="admissions-principle-title">Eternal Commitment</h3>
+            <p class="admissions-principle-text">A promise of continuous learning, enduring principles, and unwavering support from a strong community.</p>
+          </li>
+          <li class="admissions-principle adm-reveal">
+            <span class="admissions-principle-num" aria-hidden="true">03</span>
+            <h3 class="admissions-principle-title">EduSmart Excellence</h3>
+            <p class="admissions-principle-text">Transforming education with cutting-edge solutions, equipping future leaders for success through innovation.</p>
+          </li>
+          <li class="admissions-principle adm-reveal">
+            <span class="admissions-principle-num" aria-hidden="true">04</span>
+            <h3 class="admissions-principle-title">Community Learning</h3>
+            <p class="admissions-principle-text">Strengthening communities through education, inspiring growth, and shaping a brighter future for all.</p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. STAGE 6 — SCHOOL LIFE (SELF DEVELOPMENT · SOCIAL · ATHLETICS · MUSIC)
+         ===================================================================== -->
+    <section id="school-life" class="school-life-section" aria-labelledby="school-life-heading">
+      <div class="container school-life-container">
+
+        <div class="school-life-header">
+          <span class="school-life-eyebrow">School Life</span>
+          <h2 id="school-life-heading" class="school-life-heading">Growth that reaches beyond the classroom.</h2>
+        </div>
+
+        <!-- Tabs (progressively enhanced by js/school-life.js) -->
+        <div class="school-life-tabs" role="tablist" aria-label="School life">
+          <button type="button" class="school-life-tab" role="tab" id="sl-tab-self" aria-controls="sl-panel-self" aria-selected="true">
+            <span class="school-life-tab-num" aria-hidden="true">01</span>
+            <span class="school-life-tab-label">Self Development</span>
+          </button>
+          <button type="button" class="school-life-tab" role="tab" id="sl-tab-social" aria-controls="sl-panel-social" aria-selected="false" tabindex="-1">
+            <span class="school-life-tab-num" aria-hidden="true">02</span>
+            <span class="school-life-tab-label">Social</span>
+          </button>
+          <button type="button" class="school-life-tab" role="tab" id="sl-tab-athletics" aria-controls="sl-panel-athletics" aria-selected="false" tabindex="-1">
+            <span class="school-life-tab-num" aria-hidden="true">03</span>
+            <span class="school-life-tab-label">Athletics</span>
+          </button>
+          <button type="button" class="school-life-tab" role="tab" id="sl-tab-music" aria-controls="sl-panel-music" aria-selected="false" tabindex="-1">
+            <span class="school-life-tab-num" aria-hidden="true">04</span>
+            <span class="school-life-tab-label">Music</span>
+          </button>
+          <span class="school-life-tab-indicator" aria-hidden="true"></span>
+        </div>
+
+        <div class="school-life-panels">
+
+          <article class="school-life-panel is-active" role="tabpanel" id="sl-panel-self" aria-labelledby="sl-tab-self" tabindex="0">
+            <div class="school-life-media">
+              <img src="assets/images/school-life-self.jpg" alt="A student presents to her classmates while her teacher looks on" loading="lazy" width="1536" height="864">
+            </div>
+            <div class="school-life-copy">
+              <h3 class="school-life-title">Cultivating Personal Growth</h3>
+              <p>At MC Royal, we are committed to fostering the development of every individual. Our educational philosophy places self-growth at its heart, encouraging students to thrive both academically and personally.</p>
+              <p>Through a variety of programs and initiatives, we offer students opportunities to explore their passions, build self-confidence, and acquire vital life skills. Our nurturing environment empowers each student to recognize their unique abilities and strive to reach their fullest potential.</p>
+            </div>
+          </article>
+
+          <article class="school-life-panel" role="tabpanel" id="sl-panel-social" aria-labelledby="sl-tab-social" tabindex="0">
+            <div class="school-life-media">
+              <img src="assets/images/school-life-social.jpg" alt="Students in uniform talking and laughing together on a school balcony" loading="lazy" width="1536" height="864">
+            </div>
+            <div class="school-life-copy">
+              <h3 class="school-life-title">Fostering Social Bonds</h3>
+              <p>At MC Royal, we recognize the vital role social development plays in shaping well-rounded individuals. Students are encouraged to engage in meaningful interactions that promote empathy, collaboration, and leadership.</p>
+              <p>Our wide array of social events and clubs provides students with opportunities to build strong relationships, broaden their horizons, and make a positive impact on the school community.</p>
+            </div>
+          </article>
+
+          <article class="school-life-panel" role="tabpanel" id="sl-panel-athletics" aria-labelledby="sl-tab-athletics" tabindex="0">
+            <div class="school-life-media">
+              <img src="assets/images/school-life-athletics.jpg" alt="Students passing a relay baton during an outdoor athletics session" loading="lazy" width="1536" height="864">
+            </div>
+            <div class="school-life-copy">
+              <h3 class="school-life-title">Building Strength Through Athletics</h3>
+              <p>At MC Royal, athletics plays a vital role in promoting both physical fitness and teamwork. Our sports programs are crafted to push students beyond their limits, fostering discipline, resilience, and a sense of healthy competition.</p>
+              <p>Students gain valuable lessons in perseverance and the importance of a balanced lifestyle, whether they're involved in team sports or individual pursuits. We take pride in shaping not only athletes but well-rounded individuals who appreciate the true spirit of sportsmanship.</p>
+            </div>
+          </article>
+
+          <article class="school-life-panel" role="tabpanel" id="sl-panel-music" aria-labelledby="sl-tab-music" tabindex="0">
+            <div class="school-life-media">
+              <img src="assets/images/school-life-music.jpg" alt="Two students play saxophones in a music rehearsal guided by their teacher" loading="lazy" width="1536" height="864">
+            </div>
+            <div class="school-life-copy">
+              <h3 class="school-life-title">Cultivating Musical Talent</h3>
+              <p>At MC Royal, music is an integral part of our cultural and creative offerings. Our music programs provide students with opportunities to explore their musical abilities, whether it's through playing instruments, singing, or composing.</p>
+              <p>Engaging in music promotes creativity, discipline, and emotional expression, allowing students to showcase their talents and enrich their overall learning experience. We believe music is a universal language that not only enhances education but also fosters a sense of community.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================================
+         9. STAGE 7 — ACADEMICS / OUR CURRICULUM
+         ===================================================================== -->
+    <section id="academics" class="curriculum-section" aria-labelledby="curriculum-heading">
+      <div class="container curriculum-container">
+
+        <!-- Overview -->
+        <div class="curriculum-intro">
+          <div class="curriculum-intro-head">
+            <span class="curriculum-eyebrow">Our Curriculum</span>
+            <h2 id="curriculum-heading" class="curriculum-heading">A well-rounded education, carefully designed.</h2>
+          </div>
+          <div class="curriculum-intro-body">
+            <p class="curriculum-lead">At MC Royal, our curriculum is carefully designed to offer a well-rounded education that equips students for academic achievement and success in life beyond the classroom. We provide a wide variety of subjects that cater to different interests and abilities, allowing students to pursue their passions while also establishing a strong foundation in essential academic areas. Our focus is on developing critical thinking, problem-solving, and creativity, inspiring students to become independent learners who are well-prepared for the dynamic world ahead.</p>
+            <p>Beyond core academic subjects, our curriculum also offers enrichment programs that support students' holistic development. Students can participate in extracurricular activities like arts, sports, and technology, which enhance their academic learning and foster important life skills. With a focus on project-based learning, teamwork, and hands-on experiences, we ensure that our students are not only knowledgeable but also adaptable and innovative thinkers, confident in their ability to tackle future challenges.</p>
+          </div>
+        </div>
+
+        <!-- Photograph band -->
+        <div class="curriculum-gallery">
+          <figure class="curriculum-figure curriculum-figure--wide">
+            <div class="curriculum-figure-frame">
+              <img src="assets/images/curriculum-science.jpg" alt="Students in lab coats looking through a microscope and measuring solutions in the science laboratory" loading="lazy" width="1536" height="864">
+            </div>
+            <figcaption>Science</figcaption>
+          </figure>
+          <figure class="curriculum-figure">
+            <div class="curriculum-figure-frame">
+              <img src="assets/images/curriculum-technology.jpg" alt="Two students working together at a computer while their teacher guides them" loading="lazy" width="1536" height="864">
+            </div>
+            <figcaption>Technology</figcaption>
+          </figure>
+        </div>
+
+        <!-- Subjects -->
+        <div id="curriculum" class="curriculum-subjects">
+          <article class="curriculum-subject">
+            <h3 class="curriculum-subject-title"><span class="curriculum-subject-num" aria-hidden="true">01</span>Science</h3>
+            <p>At MC Royal, our science curriculum is crafted to spark curiosity and cultivate a profound understanding of the natural world. Students participate in hands-on experiments, team-based projects, and critical analysis to delve into fundamental concepts in biology, chemistry, physics, and environmental science.</p>
+            <p>We prioritize scientific inquiry and problem-solving, equipping students with the essential skills to think critically and tackle real-world challenges with confidence and creativity.</p>
+          </article>
+          <article class="curriculum-subject">
+            <h3 class="curriculum-subject-title"><span class="curriculum-subject-num" aria-hidden="true">02</span>Technology</h3>
+            <p>Our technology curriculum is designed to be at the cutting edge of modern education, equipping students with the skills and knowledge needed to excel in a digital world. From data processing to software development, students gain the expertise to navigate and innovate within the ever-changing technological landscape.</p>
+            <p>We emphasize both hands-on skills and creative thinking, ensuring students are ready to lead in technology-driven fields and adapt to future innovations.</p>
+          </article>
+          <article class="curriculum-subject">
+            <h3 class="curriculum-subject-title"><span class="curriculum-subject-num" aria-hidden="true">03</span>Music</h3>
+            <p>At MC Royal, music is not just an art form; it is an essential part of our students' well-rounded education. Our music curriculum fosters creativity, self-expression, and an appreciation for diverse cultures through a broad spectrum of musical experiences.</p>
+            <p>Students are given the opportunity to learn musical instruments, explore various genres, and take part in live performances. We believe that music enhances both the mind and the spirit, teaching discipline, emotional intelligence, and offering students a deeper connection to the world around them.</p>
+          </article>
+          <article class="curriculum-subject">
+            <h3 class="curriculum-subject-title"><span class="curriculum-subject-num" aria-hidden="true">04</span>Social Studies</h3>
+            <p>Our social studies curriculum offers students a well-rounded understanding of the world and their role in it. By exploring history, geography, civics, and sociology, students gain valuable perspectives on the social, cultural, and political forces that shape societies.</p>
+            <p>We focus on developing critical thinking, empathy, and global awareness, inspiring students to become informed and responsible citizens who can make positive contributions to their communities and the world.</p>
+          </article>
+        </div>
+
+        <div class="curriculum-cta-wrap">
+          <a href="#academics" class="curriculum-cta" data-demo-message="The full Academics page is coming soon in this demo.">
+            <span>Explore Academics</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- =====================================================================
+         10. STAGE 8 — OUR ENVIRONMENT / INFRASTRUCTURE
+         ===================================================================== -->
+    <section id="facilities" class="environment-section" aria-labelledby="environment-heading">
+
+      <!-- Full-bleed campus photograph with restrained title -->
+      <div class="environment-band">
+        <img class="environment-band-img" src="assets/images/environment-campus.jpg" alt="The MC Royal school building: an ochre-yellow wing and a terracotta wing of open balcony corridors around a paved forecourt" loading="lazy" width="1536" height="864">
+        <div class="environment-band-overlay" aria-hidden="true"></div>
+        <div class="container environment-band-content">
+          <span class="environment-eyebrow">Our Environment</span>
+          <h2 id="environment-heading" class="environment-heading">A secure, inspiring and welcoming campus.</h2>
+        </div>
+      </div>
+
+      <!-- Detail photograph + narrative -->
+      <div class="container environment-container">
+        <div class="environment-grid">
+          <figure class="environment-detail">
+            <img src="assets/images/environment-corridor.jpg" alt="A sunlit balcony corridor with terracotta columns and white railings" loading="lazy" width="960" height="1280">
+          </figure>
+          <div class="environment-copy">
+            <h3 class="environment-title">Infrastructure</h3>
+            <p class="environment-lead">At MC Royal, we have crafted our infrastructure to offer the best possible environment for learning, academic achievement, and student well-being. Our campus includes modern classrooms, fully equipped laboratories, and expansive recreational spaces.</p>
+            <p>Sustainability and eco-friendly initiatives are at the heart of our design, ensuring our environment supports learning while also benefiting the community. Our campus is a secure, inspiring, and welcoming space for students to thrive.</p>
+            <p class="environment-address">
+              <span class="environment-address-rule" aria-hidden="true"></span>
+              <span>45 Kajola Road, Iju-Obawole, Lagos</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================================
+         11. STAGE 9 — OUR STAFF
+         ===================================================================== -->
+    <section id="our-staff" class="staff-section" aria-labelledby="staff-heading">
+      <div class="container staff-container">
+
+        <div class="staff-header">
+          <span class="staff-eyebrow">Our Staff</span>
+          <h2 id="staff-heading" class="staff-heading">The foundation of our success.</h2>
+        </div>
+
+        <!-- Real MC Royal staff photograph (cropped and tone-corrected only) -->
+        <figure class="staff-figure">
+          <div class="staff-figure-frame">
+            <img src="assets/images/staff-team.jpg" alt="MC Royal Schools staff standing together in purple attire" loading="lazy" width="1393" height="532">
+          </div>
+          <figcaption>
+            <span class="staff-caption-rule" aria-hidden="true"></span>
+            <span>MC Royal Schools staff</span>
+          </figcaption>
+        </figure>
+
+        <div class="staff-copy">
+          <p class="staff-lead">At MC Royal, our exceptional and highly skilled staff are the foundation of our success. We are dedicated to employing educators who are not only experts in their respective fields but also passionate about teaching and guiding students. Our staff members engage in ongoing professional development to ensure they remain up-to-date with the latest educational practices and innovative teaching strategies.</p>
+          <p>They collaborate closely to support both the academic and personal growth of students, creating a supportive environment where each student can reach their full potential.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- =====================================================================
+         12. STAGE 10 — OUR COLLEGE / SECONDARY COLLEGE
+         ===================================================================== -->
+    <section id="secondary" class="secondary-section" aria-labelledby="secondary-heading">
+      <div class="container secondary-container">
+        <div class="secondary-grid">
+
+          <div class="secondary-content">
+            <span class="secondary-eyebrow">Our College</span>
+            <h2 id="secondary-heading" class="secondary-heading">Secondary College</h2>
+            <p class="secondary-lead">The secondary program at MC Royal is structured to prepare students for both higher education and their future professional paths. Our curriculum offers a comprehensive approach, blending challenging academic subjects with opportunities for personal and social development.</p>
+            <p class="secondary-text">We emphasize the development of critical thinking, problem-solving abilities, and a strong sense of responsibility. Students are encouraged to explore their interests through elective courses, extracurricular activities, and leadership opportunities, ensuring they are well-prepared for the challenges that lie ahead.</p>
+
+            <ul class="secondary-focus" aria-label="What we emphasize">
+              <li><span class="secondary-focus-num" aria-hidden="true">01</span>Critical thinking</li>
+              <li><span class="secondary-focus-num" aria-hidden="true">02</span>Problem-solving</li>
+              <li><span class="secondary-focus-num" aria-hidden="true">03</span>Responsibility</li>
+            </ul>
+          </div>
+
+          <!-- Portrait photograph bleeds to the right viewport edge on desktop -->
+          <figure class="secondary-visual">
+            <img src="assets/images/secondary-college.jpg" alt="Three secondary students discussing their work around a desk with open textbooks" loading="lazy" width="960" height="1280">
+          </figure>
+
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================================
+         13. STAGE 11 — EXCELLENCE / GRADUATION
+         ===================================================================== -->
+    <section id="graduation" class="graduation-section" aria-labelledby="graduation-heading">
+      <div class="container graduation-container">
+        <div class="graduation-grid">
+
+          <!-- Real MC Royal graduation photograph (cropped and tone-corrected only) -->
+          <figure class="graduation-figure">
+            <div class="graduation-frame">
+              <img src="assets/images/graduation-class.jpg" alt="MC Royal graduating students in dark suits and red ties gathered around their celebration cakes" loading="lazy" width="985" height="933">
+            </div>
+            <figcaption>
+              <span class="graduation-caption-rule" aria-hidden="true"></span>
+              <span>MC Royal graduating class</span>
+            </figcaption>
+          </figure>
+
+          <div class="graduation-content">
+            <span class="graduation-eyebrow">Excellence <span aria-hidden="true">·</span> Graduation</span>
+            <h2 id="graduation-heading" class="graduation-heading">The beginning of a new chapter.</h2>
+            <p class="graduation-lead">Graduation at MC Royal is a significant moment that celebrates years of hard work, dedication, and growth. Our graduation ceremonies recognize the accomplishments of our students and the strong community that has supported them throughout their educational journey.</p>
+            <p>We celebrate each student's unique contributions and the milestones they've reached. Graduation represents the beginning of a new chapter, and we are proud to watch our graduates move forward with the knowledge, skills, and confidence to excel in their future endeavors.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================================
+         14. STAGE 12 — OUR COLLEGE / PRIMARY & KINDERGARTEN
+         ===================================================================== -->
+    <section id="primary" class="early-years-section" aria-labelledby="early-years-heading">
+      <div class="container early-years-container">
+        <div class="early-years-grid">
+
+          <div class="early-years-content">
+            <span class="early-years-eyebrow">Our College</span>
+            <h2 id="early-years-heading" class="early-years-heading">Primary &amp; Kindergarten</h2>
+            <p class="early-years-lead">At MC Royal, our primary and kindergarten programs are designed to build a strong foundation for lifelong learning. In these early stages, we focus on creating a nurturing and engaging environment where young learners can explore, discover, and develop essential skills.</p>
+            <p>Our curriculum includes interactive and stimulating activities that encourage cognitive, social, and emotional growth. We aim to instill a love of learning from the very beginning, setting the stage for future academic success and personal development.</p>
+          </div>
+
+          <!-- Overlapping two-photo collage -->
+          <div class="early-years-collage">
+            <figure id="kindergarten" class="early-years-photo early-years-photo--kg">
+              <img src="assets/images/early-years-kindergarten.jpg" alt="Kindergarten children building with coloured wooden blocks while their teacher guides them" loading="lazy" width="960" height="1280">
+              <figcaption>Kindergarten</figcaption>
+            </figure>
+            <figure class="early-years-photo early-years-photo--primary">
+              <img src="assets/images/early-years-primary.jpg" alt="Two primary pupils sharing a picture book as their teacher looks on" loading="lazy" width="1280" height="960">
+              <figcaption>Primary</figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       15. STAGE 13 — NEWSLETTER + SITE FOOTER
+       ===================================================================== -->
+  <footer id="contact" class="site-footer" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="visually-hidden">MC Royal Schools contact details and newsletter</h2>
+    <div class="container footer-container">
+
+      <!-- Newsletter invitation -->
+      <div class="footer-newsletter">
+        <div class="footer-newsletter-copy">
+          <span class="footer-eyebrow">Newsletter</span>
+          <h3 class="footer-newsletter-heading">Sign up to our newsletter</h3>
+          <p>Stay connected with MC Royal Schools by signing up for our newsletter! By subscribing, you'll receive the latest updates on school events, important announcements, and insights into our educational programmes.</p>
+        </div>
+
+        <!-- Demo interaction: validates and shows a success state in the
+             browser only (js/footer.js). Nothing is sent anywhere. -->
+        <form class="footer-newsletter-form" action="#" novalidate>
+          <label for="newsletter-email" class="footer-form-label">Email address</label>
+          <div class="footer-form-row">
+            <input id="newsletter-email" name="email" type="email" class="footer-input" placeholder="Enter your email" autocomplete="email" required>
+            <button type="submit" class="footer-submit">
+              <span>Subscribe</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+          <p class="footer-form-note" aria-live="polite"><span class="footer-demo-tag">Demo</span>No email is sent; this shows how sign-up would work.</p>
+        </form>
+      </div>
+
+      <!-- Footer information -->
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-brand-link" aria-label="McRoyal Schools Homepage">
+            <img src="assets/images/logo.png" alt="McRoyal Schools Logo" width="46" height="36" loading="lazy">
+            <span class="footer-brand-text">
+              <span class="footer-brand-title">McRoyal Schools</span>
+              <span class="footer-brand-sub">Excellence Through Learning</span>
+            </span>
+          </a>
+          <p>Welcome to MC Royal Schools, where education meets innovation. Our mission is to empower students with the tools and resources they need to excel academically and personally.</p>
+        </div>
+
+        <div class="footer-col footer-col--contact">
+          <h3 class="footer-col-title">Contact</h3>
+          <ul class="footer-list">
+            <li><a href="tel:08035160624" data-demo-message="Calling is disabled in this demo.">0803 516 0624</a></li>
+            <li><a href="mailto:info@mcroyalschools.com" data-demo-message="Email is disabled in this demo.">info@mcroyalschools.com</a></li>
+            <li><address>45 Kajola Road,<br>Iju-Obawole, Lagos</address></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Our Links</h3>
+          <ul class="footer-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#portal" data-demo-message="The demo school portal is coming soon.">Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col--apply">
+          <h3 class="footer-col-title">Admissions</h3>
+          <p class="footer-apply-text">Nursery &middot; Primary &middot; College</p>
+          <a href="/admissions" class="footer-apply-link">
+            <span>Apply Now</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span data-current-year>2026</span> MC Royal Schools. All rights reserved.</p>
+        <p class="footer-motto">Excellence Through Learning</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Navigation JavaScript Controller -->
+  <script src="js/navigation.js"></script>
+  <script src="js/admissions.js"></script>
+  <script src="js/school-life.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

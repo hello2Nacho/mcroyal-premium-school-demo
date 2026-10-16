@@ -1,0 +1,407 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 6: SCHOOL LIFE
+   Visual Direction: Human, lively, cinematic. The first dark section after
+           the hero, giving the page a change of rhythm.
+   Layout: Numbered editorial tabs over a large photograph + copy split.
+           Panels share one grid cell so switching never shifts the layout.
+   ========================================================================== */
+
+.school-life-section {
+  position: relative;
+  background-color: #0F172A;
+  /* Faint royal glow, top-left, to keep the navy from feeling flat */
+  background-image: radial-gradient(ellipse 70% 60% at 0% 0%, rgba(107, 62, 140, 0.24) 0%, transparent 100%);
+  color: #FFFFFF;
+  padding-top: clamp(88px, 10vw, 140px);
+  padding-bottom: clamp(88px, 10vw, 140px);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+.school-life-container {
+  position: relative;
+  max-width: var(--container-max-width);
+}
+
+/* -------------------------------------------------------------------------
+   1. HEADER
+   ------------------------------------------------------------------------- */
+.school-life-header {
+  max-width: 760px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.school-life-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-300);
+  margin-bottom: var(--space-4);
+}
+
+.school-life-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-300);
+}
+
+.school-life-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.4vw, 3.25rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* -------------------------------------------------------------------------
+   2. TABS
+   ------------------------------------------------------------------------- */
+.school-life-tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.school-life-tab {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  min-height: 64px;
+  padding: 20px 16px 22px 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-family: var(--font-family-display);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.school-life-tab:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.school-life-tab[aria-selected="true"] {
+  color: #FFFFFF;
+}
+
+.school-life-tab:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: -2px;
+  border-radius: var(--radius-xs);
+}
+
+.school-life-tab-num {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color var(--transition-base);
+}
+
+.school-life-tab[aria-selected="true"] .school-life-tab-num {
+  color: #C99738; /* Regal Gold — the section's single accent */
+}
+
+.school-life-tab-label {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+/* Sliding indicator — positioned by JS; hidden without JS */
+.school-life-tab-indicator {
+  display: none;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #C99738;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sl-js .school-life-tab-indicator {
+  display: block;
+}
+
+/* -------------------------------------------------------------------------
+   3. PANELS — photograph + copy
+   ------------------------------------------------------------------------- */
+.school-life-panels {
+  display: grid;
+}
+
+/* Without JS every panel is shown in sequence */
+.school-life-panel {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+}
+
+.school-life-panel + .school-life-panel {
+  margin-top: var(--space-16);
+}
+
+.school-life-panel:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: 8px;
+  border-radius: var(--radius-md);
+}
+
+/* With JS, panels stack in one cell and crossfade */
+.sl-js .school-life-panel {
+  grid-area: 1 / 1;
+  margin-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0s linear 0.6s;
+}
+
+.sl-js .school-life-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.05s,
+              visibility 0s;
+}
+
+.school-life-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: #1E293B;
+}
+
+.school-life-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sl-js .school-life-panel .school-life-media img {
+  transform: scale(1.04);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sl-js .school-life-panel.is-active .school-life-media img {
+  transform: scale(1);
+}
+
+.school-life-copy {
+  min-width: 0;
+}
+
+.sl-js .school-life-panel .school-life-copy {
+  transform: translateY(12px);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sl-js .school-life-panel.is-active .school-life-copy {
+  transform: none;
+}
+
+.school-life-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin: 0 0 var(--space-5) 0;
+}
+
+.school-life-copy p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.school-life-copy p + p {
+  margin-top: var(--space-4);
+}
+
+/* -------------------------------------------------------------------------
+   4. SMALL DESKTOP (1024px - 1279px)
+   ------------------------------------------------------------------------- */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .school-life-panel {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+  }
+
+  .school-life-copy p {
+    font-size: 0.9375rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .school-life-heading {
+    font-size: 2.5rem;
+    max-width: 600px;
+  }
+
+  /* Natural-width tabs so the long label never crowds its neighbour */
+  .school-life-tabs {
+    display: flex;
+    gap: 40px;
+  }
+
+  .school-life-tab {
+    gap: 10px;
+    padding-right: 0;
+  }
+
+  .school-life-tab-label {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .school-life-panel {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .school-life-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .school-life-copy {
+    max-width: 640px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   6. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .school-life-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .school-life-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .school-life-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .school-life-heading {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  /* 2 x 2 tab grid with hairlines */
+  .school-life-tabs {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    margin-bottom: var(--space-8);
+  }
+
+  .school-life-tab {
+    position: relative;
+    min-height: 56px;
+    padding: 16px 8px 16px 0;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .school-life-tab:nth-child(even) {
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .school-life-tab-label {
+    font-size: 1rem;
+  }
+
+  /* Indicator is per-tab on mobile rather than sliding */
+  .sl-js .school-life-tab-indicator {
+    display: none;
+  }
+
+  .school-life-tab::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background-color: #C99738;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .school-life-tab:nth-child(even)::after {
+    left: 16px;
+  }
+
+  .school-life-tab[aria-selected="true"]::after {
+    transform: scaleX(1);
+  }
+
+  .school-life-panel {
+    gap: var(--space-6);
+  }
+
+  .school-life-media {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-lg);
+  }
+
+  .school-life-title {
+    font-size: 1.375rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .school-life-copy p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   7. PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .school-life-section *,
+  .school-life-section *::before,
+  .school-life-section *::after {
+    transition: none !important;
+  }
+
+  .school-life-media img,
+  .school-life-copy {
+    transform: none !important;
+  }
+}

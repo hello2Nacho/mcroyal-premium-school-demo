@@ -1,0 +1,242 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 10: OUR COLLEGE / SECONDARY COLLEGE
+   Visual Direction: Mature, focused, aspirational.
+   Layout: Copy left; a tall portrait photograph bleeding to the right
+           viewport edge (mirroring Admissions, which bleeds left), with the
+           three emphases from the copy pulled out as a numbered row.
+   ========================================================================== */
+
+.secondary-section {
+  position: relative;
+  background-color: #F8FAFC;
+  padding-top: clamp(88px, 10vw, 140px);
+  padding-bottom: clamp(88px, 10vw, 140px);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+.secondary-container {
+  max-width: var(--container-max-width);
+}
+
+.secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 7vw, 112px);
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------
+   1. COPY
+   ------------------------------------------------------------------------- */
+.secondary-content {
+  min-width: 0;
+}
+
+.secondary-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-4);
+}
+
+.secondary-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-600);
+}
+
+.secondary-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.6vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+  margin: 0 0 var(--space-6) 0;
+}
+
+.secondary-lead {
+  font-family: var(--font-family-sans);
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  line-height: 1.72;
+  color: #334155;
+  margin: 0 0 var(--space-5) 0;
+  max-width: 560px;
+}
+
+.secondary-text {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+  max-width: 560px;
+}
+
+/* Three emphases taken from the copy, as a quiet numbered row */
+.secondary-focus {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: var(--space-10) 0 0 0;
+  padding: 0;
+  max-width: 560px;
+}
+
+.secondary-focus li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(15, 23, 42, 0.14);
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  color: #0F172A;
+}
+
+.secondary-focus-num {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary-600);
+}
+
+/* -------------------------------------------------------------------------
+   2. PORTRAIT PHOTOGRAPH — bleeds right
+   ------------------------------------------------------------------------- */
+.secondary-visual {
+  margin: 0;
+  margin-right: calc(-1 * (var(--container-padding) + max(0px, (100vw - var(--container-max-width)) / 2)));
+  height: clamp(560px, 52vw, 760px);
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  overflow: hidden;
+  background-color: #E2E8F0;
+  min-width: 0;
+}
+
+.secondary-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 45% 35%;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.secondary-visual:hover img {
+  transform: scale(1.02);
+}
+
+/* -------------------------------------------------------------------------
+   3. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .secondary-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Photograph first, full-bleed both sides */
+  .secondary-visual {
+    order: -1;
+    margin-left: calc(-1 * var(--container-padding));
+    margin-right: calc(-1 * var(--container-padding));
+    height: auto;
+    aspect-ratio: 16 / 10;
+    border-radius: 0;
+  }
+
+  .secondary-visual img {
+    object-position: 50% 40%;
+  }
+
+  .secondary-heading {
+    font-size: 2.75rem;
+  }
+
+  .secondary-lead,
+  .secondary-text,
+  .secondary-focus {
+    max-width: 640px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   4. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .secondary-section {
+    padding-top: 0;
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .secondary-grid {
+    gap: var(--space-10);
+  }
+
+  .secondary-visual {
+    aspect-ratio: 4 / 3;
+  }
+
+  .secondary-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .secondary-heading {
+    font-size: 2.125rem;
+    margin-bottom: var(--space-5);
+  }
+
+  .secondary-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .secondary-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  /* Stacked rows: number in a gutter, label beside it */
+  .secondary-focus {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: var(--space-8);
+  }
+
+  .secondary-focus li {
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+  }
+
+  .secondary-focus li:last-child {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .secondary-visual img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

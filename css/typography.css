@@ -1,0 +1,100 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+/* Headings */
+.display-title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tighter);
+  color: var(--color-text-primary);
+}
+
+h1, .h1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+}
+
+h2, .h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+}
+
+h3, .h3 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+}
+
+h4, .h4 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+
+/* Body and paragraphs */
+.lead {
+  font-size: var(--font-size-lead);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+}
+
+p, .body-text {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.body-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+.caption {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-tertiary);
+}
+
+.label-caps {
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-caps);
+  color: var(--color-primary-600);
+}
+
+/* Text color utilities */
+.text-primary   { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-tertiary  { color: var(--color-text-tertiary); }
+.text-muted     { color: var(--color-text-muted); }
+.text-inverse   { color: var(--color-text-inverse); }
+.text-brand     { color: var(--color-primary-600); }
+.text-accent    { color: var(--color-accent-600); }
+
+/* Text alignment & styling */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }

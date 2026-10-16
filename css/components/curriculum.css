@@ -1,0 +1,378 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 7: ACADEMICS / OUR CURRICULUM
+   Visual Direction: Scholarly, calm, typographic. Returns to white after the
+           dark School Life band.
+   Layout: Two-column editorial intro, an asymmetric two-photo band, then
+           the four subjects as a numbered 2 x 2 text sequence.
+   ========================================================================== */
+
+.curriculum-section {
+  position: relative;
+  background-color: #FFFFFF;
+  padding-top: clamp(88px, 10vw, 140px);
+  padding-bottom: clamp(88px, 10vw, 140px);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+.curriculum-container {
+  max-width: var(--container-max-width);
+}
+
+/* -------------------------------------------------------------------------
+   1. INTRO — heading left, overview right
+   ------------------------------------------------------------------------- */
+.curriculum-intro {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+  margin-bottom: clamp(56px, 6vw, 88px);
+}
+
+.curriculum-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-4);
+}
+
+.curriculum-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-600);
+}
+
+.curriculum-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.4vw, 3.25rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Align the overview's first line with the heading, below the eyebrow */
+.curriculum-intro-body {
+  padding-top: calc(var(--font-size-label) + var(--space-4) + 6px);
+}
+
+.curriculum-intro-body p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+}
+
+.curriculum-intro-body .curriculum-lead {
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  line-height: 1.72;
+  color: #334155;
+}
+
+.curriculum-intro-body p + p {
+  margin-top: var(--space-5);
+}
+
+/* -------------------------------------------------------------------------
+   2. PHOTO BAND — asymmetric pair, equal height
+   ------------------------------------------------------------------------- */
+.curriculum-gallery {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: clamp(16px, 2vw, 24px);
+  margin-bottom: clamp(72px, 8vw, 112px);
+}
+
+.curriculum-figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.curriculum-figure-frame {
+  height: clamp(300px, 32vw, 460px);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: #F1F5F9;
+}
+
+.curriculum-figure-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.curriculum-figure--wide .curriculum-figure-frame img {
+  object-position: 40% 50%;
+}
+
+.curriculum-figure:not(.curriculum-figure--wide) .curriculum-figure-frame img {
+  object-position: 52% 50%;
+}
+
+.curriculum-figure:hover .curriculum-figure-frame img {
+  transform: scale(1.02);
+}
+
+.curriculum-figure figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: var(--space-4);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.curriculum-figure figcaption::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background-color: rgba(15, 23, 42, 0.25);
+}
+
+/* -------------------------------------------------------------------------
+   3. SUBJECTS — numbered 2 x 2 sequence
+   ------------------------------------------------------------------------- */
+.curriculum-subjects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(40px, 6vw, 96px);
+  row-gap: clamp(48px, 5vw, 72px);
+  scroll-margin-top: 104px;
+}
+
+.curriculum-subject {
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.curriculum-subject-title {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-family: var(--font-family-display);
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+  margin: 0 0 var(--space-5) 0;
+}
+
+.curriculum-subject-num {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary-600);
+}
+
+.curriculum-subject p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+  max-width: 560px;
+}
+
+.curriculum-subject p + p {
+  margin-top: var(--space-4);
+}
+
+/* -------------------------------------------------------------------------
+   4. CTA — quiet text link
+   ------------------------------------------------------------------------- */
+.curriculum-cta-wrap {
+  margin-top: clamp(56px, 6vw, 80px);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.curriculum-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 14px 28px;
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-600);
+  text-decoration: none;
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base),
+              border-color var(--transition-base),
+              color var(--transition-base);
+}
+
+.curriculum-cta:hover {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-600);
+}
+
+.curriculum-cta:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.curriculum-cta svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.curriculum-cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* -------------------------------------------------------------------------
+   5. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .curriculum-intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .curriculum-heading {
+    font-size: 2.5rem;
+    max-width: 600px;
+  }
+
+  .curriculum-intro-body {
+    padding-top: 0;
+    max-width: 680px;
+  }
+
+  .curriculum-figure-frame {
+    height: 300px;
+  }
+
+  .curriculum-subjects {
+    column-gap: 40px;
+  }
+
+  .curriculum-subject p {
+    font-size: 0.9375rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   6. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .curriculum-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .curriculum-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .curriculum-heading {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .curriculum-intro {
+    margin-bottom: var(--space-10);
+  }
+
+  .curriculum-intro-body .curriculum-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .curriculum-intro-body p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  /* Photos sit side by side as a portrait pair to keep the scroll short */
+  .curriculum-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-14);
+  }
+
+  .curriculum-figure-frame {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-lg);
+  }
+
+  .curriculum-figure--wide .curriculum-figure-frame img {
+    object-position: 22% 50%;
+  }
+
+  .curriculum-figure:not(.curriculum-figure--wide) .curriculum-figure-frame img {
+    object-position: 48% 50%;
+  }
+
+  .curriculum-figure figcaption {
+    margin-top: var(--space-3);
+  }
+
+  .curriculum-subjects {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-10);
+  }
+
+  .curriculum-subject {
+    padding-top: var(--space-5);
+  }
+
+  .curriculum-subject-title {
+    font-size: 1.375rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .curriculum-subject p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .curriculum-cta-wrap {
+    margin-top: var(--space-12);
+    padding-top: var(--space-6);
+  }
+
+  .curriculum-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   7. PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .curriculum-figure-frame img,
+  .curriculum-cta,
+  .curriculum-cta svg {
+    transition: none !important;
+    transform: none !important;
+  }
+}

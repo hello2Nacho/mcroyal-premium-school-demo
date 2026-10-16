@@ -1,0 +1,573 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 13: NEWSLETTER + SITE FOOTER
+   Visual Direction: Calm, institutional close. Deep navy, quiet hierarchy,
+           real contact details only.
+   Layout: Newsletter invitation (copy + inline form), hairline, four-column
+           information grid, bottom bar.
+   ========================================================================== */
+
+.site-footer {
+  position: relative;
+  background-color: #0F172A;
+  background-image: radial-gradient(ellipse 55% 60% at 0% 0%, rgba(107, 62, 140, 0.2) 0%, transparent 100%);
+  color: rgba(255, 255, 255, 0.72);
+  padding-top: clamp(72px, 8vw, 112px);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+.site-footer .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.footer-container {
+  max-width: var(--container-max-width);
+}
+
+/* -------------------------------------------------------------------------
+   1. NEWSLETTER
+   ------------------------------------------------------------------------- */
+.footer-newsletter {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: end;
+  padding-bottom: clamp(56px, 6vw, 80px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-300);
+  margin-bottom: var(--space-4);
+}
+
+.footer-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-primary-300);
+}
+
+.footer-newsletter-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.875rem, 2.8vw, 2.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.footer-newsletter-copy p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0;
+  max-width: 560px;
+}
+
+.footer-newsletter-form {
+  min-width: 0;
+}
+
+.footer-form-label {
+  display: block;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--space-2);
+}
+
+.footer-form-row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.footer-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 18px;
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-input:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-input:focus {
+  outline: none;
+  border-color: var(--color-primary-300);
+  background-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 0 3px rgba(194, 166, 227, 0.25);
+}
+
+.footer-input[aria-invalid="true"] {
+  border-color: #FCA5A5;
+}
+
+.footer-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-height: 52px;
+  padding: 0 24px;
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  color: #FFFFFF;
+  background-color: var(--color-primary-600);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-base), transform var(--transition-fast);
+}
+
+.footer-submit:hover {
+  background-color: var(--color-primary-500);
+  transform: translateY(-1px);
+}
+
+.footer-submit:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: 2px;
+}
+
+.footer-submit svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.footer-submit:hover svg {
+  transform: translateX(3px);
+}
+
+.footer-form-note {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  margin: var(--space-3) 0 0 0;
+}
+
+.footer-form-note.is-error {
+  color: #FCA5A5;
+}
+
+/* Small "Demo" tag marking the interaction as a demonstration */
+.footer-demo-tag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background-color: rgba(194, 166, 227, 0.16);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-200);
+  vertical-align: 1px;
+}
+
+/* Success state (replaces the label + input row) */
+.footer-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 22px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(194, 166, 227, 0.28);
+  border-radius: var(--radius-lg);
+  animation: footer-success-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-success:focus {
+  outline: none;
+}
+
+.footer-success:focus-visible {
+  box-shadow: 0 0 0 3px rgba(194, 166, 227, 0.3);
+}
+
+.footer-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-primary-600);
+  color: #FFFFFF;
+}
+
+.footer-success-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-success-copy {
+  min-width: 0;
+}
+
+.footer-success-title {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 2px 0 4px 0;
+}
+
+.footer-success-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.footer-success-reset {
+  margin-top: var(--space-3);
+  padding: 0;
+  min-height: 32px;
+  background: none;
+  border: 0;
+  font-family: var(--font-family-sans);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-200);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.footer-success-reset:hover {
+  color: #FFFFFF;
+}
+
+.footer-success-reset:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+@keyframes footer-success-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-success {
+    animation: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   2. INFORMATION GRID
+   ------------------------------------------------------------------------- */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr 3fr;
+  gap: clamp(32px, 4vw, 64px);
+  padding: clamp(48px, 5vw, 72px) 0;
+}
+
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: var(--space-5);
+}
+
+/* Logo sits on a light disc so the full-colour crest stays legible on navy */
+.footer-brand-link img {
+  width: 46px;
+  height: auto;
+  padding: 6px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-md);
+  box-sizing: content-box;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-title {
+  font-family: var(--font-family-display);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: #FFFFFF;
+}
+
+.footer-brand-sub {
+  font-family: var(--font-family-sans);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-brand p {
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0;
+  max-width: 360px;
+}
+
+.footer-col-title {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 var(--space-5) 0;
+}
+
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-list a,
+.footer-list address {
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  font-style: normal;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer-list a {
+  transition: color var(--transition-base);
+}
+
+.footer-list a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-300);
+  text-underline-offset: 4px;
+}
+
+.footer-list a:focus-visible,
+.footer-apply-link:focus-visible,
+.footer-brand-link:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+.footer-apply-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.footer-apply-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 20px;
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.footer-apply-link:hover {
+  border-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.footer-apply-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.footer-apply-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* -------------------------------------------------------------------------
+   3. BOTTOM BAR
+   ------------------------------------------------------------------------- */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-6) 0 var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-family: var(--font-family-sans);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.footer-bottom .footer-motto {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom .footer-motto::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #C99738; /* Regal Gold — single accent */
+}
+
+/* -------------------------------------------------------------------------
+   4. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .footer-newsletter {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .footer-newsletter-form {
+    max-width: 560px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: var(--space-10);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand p {
+    max-width: 520px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .site-footer {
+    padding-top: 64px;
+    scroll-margin-top: 72px;
+  }
+
+  .footer-newsletter-heading {
+    font-size: 1.75rem;
+  }
+
+  .footer-newsletter-copy p {
+    font-size: 0.9375rem;
+  }
+
+  .footer-form-row {
+    flex-direction: column;
+  }
+
+  .footer-submit {
+    justify-content: center;
+  }
+
+  /* Contact gets the full width so the email never breaks; links and
+     admissions sit side by side beneath it */
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-8);
+    column-gap: var(--space-6);
+  }
+
+  .footer-col--contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   6. PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .site-footer *,
+  .site-footer *::before,
+  .site-footer *::after {
+    transition: none !important;
+  }
+
+  .footer-submit:hover,
+  .footer-submit:hover svg,
+  .footer-apply-link:hover svg {
+    transform: none !important;
+  }
+}
+
+/* Respect [hidden] on elements that set their own display */
+.footer-newsletter-form [hidden] {
+  display: none !important;
+}

@@ -1,0 +1,304 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - STAGE 8: OUR ENVIRONMENT / INFRASTRUCTURE
+   Visual Direction: Architectural, calm, cinematic. A full-bleed campus
+           photograph (echoing the hero's scale), then a portrait detail that
+           overlaps the band beside the original narrative.
+   ========================================================================== */
+
+.environment-section {
+  position: relative;
+  background-color: #F8FAFC;
+  padding-bottom: clamp(88px, 10vw, 140px);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  scroll-margin-top: 84px;
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------
+   1. FULL-BLEED BAND
+   ------------------------------------------------------------------------- */
+.environment-band {
+  position: relative;
+  height: clamp(520px, 72vh, 760px);
+  overflow: hidden;
+  background-color: #1E293B;
+}
+
+.environment-band-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+/* Bottom-left shade for legibility; the sky and building stay clear */
+.environment-band-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(15, 23, 42, 0.86) 0%, rgba(15, 23, 42, 0.55) 38%, rgba(15, 23, 42, 0) 72%),
+    linear-gradient(to right, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.15) 45%, rgba(15, 23, 42, 0) 65%);
+}
+
+.environment-band-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: clamp(160px, 16vw, 220px); /* leaves room for the overlapping detail */
+  max-width: var(--container-max-width);
+}
+
+.environment-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-4);
+}
+
+.environment-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background-color: #C99738; /* Regal Gold — single accent on the photograph */
+}
+
+.environment-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 3.6vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: 640px;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(15, 23, 42, 0.25);
+}
+
+/* -------------------------------------------------------------------------
+   2. DETAIL + NARRATIVE (detail overlaps the band on desktop)
+   ------------------------------------------------------------------------- */
+.environment-container {
+  position: relative;
+  max-width: var(--container-max-width);
+}
+
+.environment-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(48px, 7vw, 112px);
+  align-items: end;
+}
+
+.environment-detail {
+  margin: calc(-1 * clamp(120px, 12vw, 180px)) 0 0 0;
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 6px solid #F8FAFC;
+  background-color: #E2E8F0;
+}
+
+.environment-detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.environment-detail:hover img {
+  transform: scale(1.02);
+}
+
+.environment-copy {
+  padding-bottom: var(--space-4);
+  max-width: 600px;
+  min-width: 0;
+}
+
+.environment-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+  margin: 0 0 var(--space-5) 0;
+}
+
+.environment-copy p {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+}
+
+.environment-copy .environment-lead {
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  line-height: 1.72;
+  color: #334155;
+}
+
+.environment-copy p + p {
+  margin-top: var(--space-5);
+}
+
+.environment-copy .environment-address {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: var(--space-8);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  color: #64748B;
+}
+
+.environment-address-rule {
+  width: 24px;
+  height: 1px;
+  background-color: rgba(15, 23, 42, 0.25);
+}
+
+/* -------------------------------------------------------------------------
+   3. TABLET (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .environment-band {
+    height: 560px;
+  }
+
+  .environment-band-img {
+    object-position: 40% 45%;
+  }
+
+  .environment-band-content {
+    padding-bottom: 140px;
+  }
+
+  .environment-heading {
+    font-size: 2.5rem;
+    max-width: 520px;
+  }
+
+  .environment-grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .environment-detail {
+    margin-top: -100px;
+  }
+
+  .environment-copy {
+    padding-top: var(--space-10);
+  }
+
+  .environment-copy p {
+    font-size: 0.9375rem;
+  }
+
+  .environment-copy .environment-lead {
+    font-size: 1.0625rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   4. MOBILE (<= 767px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .environment-section {
+    padding-bottom: 72px;
+    scroll-margin-top: 72px;
+  }
+
+  .environment-band {
+    height: 480px;
+  }
+
+  /* Centre on the corner where the two wings meet */
+  .environment-band-img {
+    object-position: 36% 45%;
+  }
+
+  .environment-band-content {
+    padding-bottom: 40px;
+  }
+
+  .environment-heading {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .environment-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  /* Narrative first, detail photograph after; no overlap */
+  .environment-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .environment-copy {
+    order: -1;
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .environment-detail {
+    margin-top: 0;
+    border: 0;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-lg);
+  }
+
+  .environment-detail img {
+    object-position: 50% 60%;
+  }
+
+  .environment-title {
+    font-size: 1.375rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .environment-copy .environment-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .environment-copy p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .environment-copy .environment-address {
+    margin-top: var(--space-6);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   5. PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .environment-detail img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

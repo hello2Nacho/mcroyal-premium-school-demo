@@ -1,0 +1,434 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - TRUE FULL-VIEWPORT CINEMATIC HERO COMPONENT
+   Visual Direction: Edge-to-edge cinematic brand film, luxury editorial overlay,
+                     restrained typography, natural warm photographic fidelity.
+   ========================================================================== */
+
+:root {
+  --header-total-height: 122px; /* 38px topbar + 84px header */
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --header-total-height: 74px; /* 0px topbar + 74px header */
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-total-height: 68px; /* 0px topbar + 68px header */
+  }
+}
+
+/* -------------------------------------------------------------------------
+   1. FULL-VIEWPORT HERO SECTION CONTAINER
+   - Edge-to-edge 100% viewport width
+   - Height calculates to fill the remaining viewport below the header exactly
+   - Locks directly underneath the sticky navigation
+   ------------------------------------------------------------------------- */
+.hero-video-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - var(--header-total-height));
+  min-height: calc(100svh - var(--header-total-height));
+  min-height: calc(100dvh - var(--header-total-height));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------
+   2. VIDEO & FALLBACK BACKDROP ARCHITECTURE (100% Bleed)
+   ------------------------------------------------------------------------- */
+.hero-video-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Real 10-Second 1920x1080 Cinematic Hero Video */
+.hero-video-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+}
+
+/* High-Quality Poster & Reduced-Motion Static Fallback */
+.hero-poster-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/images/hero-video-poster.jpg');
+  background-size: cover;
+  background-position: center center;
+  z-index: 0;
+}
+
+/* -------------------------------------------------------------------------
+   3. SUBTLE DIRECTIONAL OVERLAY (Preserving Natural Skin Tones & Purple Uniforms)
+   - Left side: directional contrast for text legibility
+   - Right side: light and transparent to showcase students & environment
+   - No heavy artificial purple wash over the video
+   ------------------------------------------------------------------------- */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.72) 0%,
+    rgba(15, 23, 42, 0.50) 38%,
+    rgba(15, 23, 42, 0.18) 68%,
+    rgba(15, 23, 42, 0.04) 100%
+  );
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------------------
+   4. CONTENT POSITIONING (Overlaid Vertically Middle-Left)
+   ------------------------------------------------------------------------- */
+.hero-video-content-wrap {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-top: var(--space-6);
+  padding-bottom: 72px; /* Clearance for bottom scroll cue */
+}
+
+.hero-video-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Category Label (Restrained Brand Pill) */
+.hero-video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.hero-video-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent-400); /* Regal Gold #E3B86A */
+}
+
+.hero-video-badge-text {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-neutral-0);
+}
+
+/* Confident Display Headline */
+.hero-video-headline {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.4rem, 4.3vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.12;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-neutral-0);
+  margin-bottom: var(--space-4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.hero-video-headline-highlight {
+  color: var(--color-accent-300); /* Warm Gold Accent */
+  position: relative;
+}
+
+/* Concise Supporting Copy */
+.hero-video-lead {
+  font-family: var(--font-family-sans);
+  font-size: clamp(1.0625rem, 1.25vw, 1.2rem);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: var(--space-6);
+  max-width: 540px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Action CTAs */
+.hero-video-ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.hero-video-cta-primary {
+  min-height: 50px;
+  padding: 0 var(--space-6);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.25), 0 1px 3px rgba(107, 62, 140, 0.35);
+  transition: background-color var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+}
+
+.hero-video-cta-primary:hover {
+  background-color: var(--color-primary-500);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 16px rgba(107, 62, 140, 0.5);
+  transform: translateY(-1px);
+}
+
+.hero-video-cta-secondary {
+  min-height: 50px;
+  padding: 0 var(--space-6);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  background: rgba(15, 23, 42, 0.45);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-md);
+  color: var(--color-neutral-0);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background-color var(--transition-base), border-color var(--transition-base), transform var(--transition-fast);
+}
+
+.hero-video-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-neutral-0);
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------------------------
+   5. SUBTLE BOTTOM SCROLL CUE
+   ------------------------------------------------------------------------- */
+/* Light focus ring: the global purple ring is too faint on the dark hero */
+.hero-video-cta-primary:focus-visible,
+.hero-video-cta-secondary:focus-visible,
+.hero-scroll-cue:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.hero-scroll-cue:hover {
+  color: var(--color-neutral-0);
+}
+
+.hero-scroll-text {
+  font-family: var(--font-family-sans);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-scroll-icon {
+  width: 15px;
+  height: 15px;
+  animation: subtleScrollBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes subtleScrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   6. TABLET RESPONSIVE ADAPTATION (768px - 1023px)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .hero-video-element,
+  .hero-poster-fallback {
+    object-position: center center;
+    background-position: center center;
+  }
+
+  .hero-video-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.20) 0%,
+      rgba(15, 23, 42, 0.48) 40%,
+      rgba(15, 23, 42, 0.82) 80%,
+      rgba(15, 23, 42, 0.92) 100%
+    );
+  }
+
+  .hero-video-section {
+    align-items: flex-end;
+  }
+
+  .hero-video-content-wrap {
+    padding-top: var(--space-6);
+    padding-bottom: 76px;
+  }
+
+  .hero-video-content {
+    max-width: 100%;
+  }
+
+  .hero-video-headline {
+    font-size: clamp(2.25rem, 4vw, 2.75rem);
+  }
+
+  .hero-video-lead {
+    max-width: 90%;
+  }
+
+  .hero-scroll-cue {
+    bottom: var(--space-3);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   7. MOBILE RESPONSIVE ADAPTATION (390px / <= 767px)
+   - Vertical viewport height formula: min-height: calc(100svh - 68px)
+   - Responsive object-position: center 22% ensures student faces are prominent
+   - Stacked CTAs with 48px+ touch targets
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hero-video-element {
+    object-position: center 20%;
+  }
+
+  .hero-poster-fallback {
+    background-position: center 20%;
+  }
+
+  .hero-video-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.15) 0%,
+      rgba(15, 23, 42, 0.38) 32%,
+      rgba(15, 23, 42, 0.78) 66%,
+      rgba(15, 23, 42, 0.94) 100%
+    );
+  }
+
+  .hero-video-section {
+    align-items: flex-end;
+  }
+
+  .hero-video-content-wrap {
+    padding-top: var(--space-3);
+    padding-bottom: 60px;
+  }
+
+  .hero-video-content {
+    width: 100%;
+  }
+
+  .hero-video-badge {
+    margin-bottom: var(--space-2);
+    padding: 4px 12px;
+  }
+
+  .hero-video-badge-text {
+    font-size: 0.6875rem;
+  }
+
+  .hero-video-headline {
+    font-size: clamp(1.875rem, 5.5vw, 2.25rem); /* 30px–36px */
+    line-height: 1.15;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-video-lead {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: var(--space-4);
+    max-width: 100%;
+  }
+
+  .hero-video-ctas {
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: 0;
+  }
+
+  .hero-video-cta-primary,
+  .hero-video-cta-secondary {
+    width: 100%;
+    min-height: 48px;
+    font-size: 0.9375rem;
+    justify-content: center;
+  }
+
+  .hero-scroll-cue {
+    bottom: var(--space-2);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   8. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-element {
+    display: none;
+  }
+
+  .hero-poster-fallback {
+    z-index: 1;
+  }
+
+  .hero-scroll-icon {
+    animation: none;
+  }
+
+  .hero-video-cta-primary,
+  .hero-video-cta-secondary {
+    transition: none;
+  }
+}

@@ -1,0 +1,702 @@
+/* ==========================================================================
+   MC ROYAL SCHOOLS - GLOBAL HEADER & NAVIGATION
+   Design Direction: Restrained, Premium, Institutional Private School
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. TOP UTILITY BAR (Desktop >= 1024px)
+   ------------------------------------------------------------------------- */
+.topbar {
+  background-color: var(--color-primary-950);
+  color: var(--color-neutral-300);
+  font-size: var(--font-size-xs);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: var(--z-header);
+}
+
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+}
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-regular);
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.topbar-item:hover {
+  color: var(--color-neutral-0);
+}
+
+.topbar-item:focus-visible {
+  outline: 2px solid var(--color-primary-300);
+  outline-offset: 3px;
+  box-shadow: none;
+  border-radius: var(--radius-xs);
+}
+
+.topbar-item svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-accent-400);
+  flex-shrink: 0;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(201, 151, 56, 0.15);
+  color: var(--color-accent-300);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  border: 1px solid rgba(201, 151, 56, 0.28);
+}
+
+.topbar-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-400);
+}
+
+@media (max-width: 1023px) {
+  .topbar {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   2. MAIN SITE HEADER
+   ------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-neutral-0);
+  border-bottom: 1px solid var(--color-border-default);
+  z-index: var(--z-header);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow-header-sticky);
+  border-bottom-color: transparent;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+  gap: clamp(8px, 1.2vw, 16px);
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .nav-desktop {
+    gap: 2px;
+  }
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-inner {
+    height: 74px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-inner {
+    height: 68px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   3. OFFICIAL BRAND LOGO LOCKUP
+   ------------------------------------------------------------------------- */
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  outline-offset: 4px;
+}
+
+.brand-logo {
+  height: 52px;
+  width: auto;
+  max-width: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-family-display);
+  font-size: 1.1875rem; /* 19px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--color-primary-900);
+}
+
+.brand-sub {
+  font-size: 0.6875rem; /* 11px */
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  color: var(--color-neutral-500);
+  margin-top: 2px;
+}
+
+@media (max-width: 767px) {
+  .brand-logo {
+    height: 44px;
+    max-width: 44px;
+  }
+  .brand-title {
+    font-size: 1.0625rem;
+  }
+  .brand-sub {
+    font-size: 0.625rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   4. DESKTOP NAVIGATION
+   ------------------------------------------------------------------------- */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 100%;
+}
+
+@media (max-width: 1023px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-family-sans);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-item:focus-within > .nav-link,
+.nav-item.is-open > .nav-link {
+  color: var(--color-primary-600);
+  background-color: var(--color-primary-50);
+}
+
+.nav-link.is-active {
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 2px;
+  background-color: var(--color-primary-600);
+  border-radius: var(--radius-full);
+}
+
+.nav-chevron {
+  width: 14px;
+  height: 14px;
+  color: var(--color-neutral-400);
+  transition: transform var(--transition-base), color var(--transition-fast);
+}
+
+.nav-item:hover .nav-chevron,
+.nav-item:focus-within .nav-chevron,
+.nav-item.is-open .nav-chevron {
+  transform: rotate(180deg);
+  color: var(--color-primary-600);
+}
+
+/* -------------------------------------------------------------------------
+   5. DESKTOP DROPDOWN MENUS (Restrained, Clean)
+   ------------------------------------------------------------------------- */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: max-content;
+  min-width: 240px;
+  background-color: var(--color-neutral-0);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-nav-dropdown);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+  z-index: var(--z-dropdown);
+}
+
+.nav-dropdown-wide {
+  min-width: 440px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-1);
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown,
+.nav-item.is-open .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-neutral-50);
+}
+
+.dropdown-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdown-item:hover .dropdown-icon-box {
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+}
+
+.dropdown-icon-box svg {
+  width: 17px;
+  height: 17px;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-title {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  line-height: var(--line-height-snug);
+  transition: color var(--transition-fast);
+}
+
+.dropdown-item:hover .dropdown-title {
+  color: var(--color-primary-600);
+}
+
+.dropdown-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+/* -------------------------------------------------------------------------
+   6. HEADER ACTIONS (Portal & Apply Now)
+   ------------------------------------------------------------------------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.btn-portal-header {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);
+  padding: 0 var(--space-3);
+  min-height: 40px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.btn-portal-header:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-primary-50);
+}
+
+.btn-portal-header svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-neutral-500);
+}
+
+.btn-portal-header:hover svg {
+  color: var(--color-primary-600);
+}
+
+.btn-apply-header {
+  min-height: 42px;
+  padding: 0 var(--space-5);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(107, 62, 140, 0.16);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: all var(--transition-base);
+}
+
+.btn-apply-header svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-base);
+}
+
+.btn-apply-header:hover {
+  background-color: var(--color-primary-700);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 62, 140, 0.25);
+  color: var(--color-neutral-0);
+}
+
+.btn-apply-header:hover svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 1023px) {
+  .header-actions .btn-portal-header,
+  .header-actions .btn-apply-header {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   7. TABLET & MOBILE HAMBURGER TOGGLE BUTTON
+   ------------------------------------------------------------------------- */
+.menu-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-800);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle-btn:hover {
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-600);
+}
+
+.menu-toggle-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 1023px) {
+  .menu-toggle-btn {
+    display: inline-flex;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   8. MOBILE DRAWER NAVIGATION
+   ------------------------------------------------------------------------- */
+.mobile-scrim {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: var(--z-modal-scrim);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.mobile-scrim.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 390px;
+  background-color: var(--color-neutral-0);
+  z-index: var(--z-drawer);
+  transform: translateX(100%);
+  transition: transform var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 32px rgba(15, 23, 42, 0.12);
+  overflow-y: auto;
+}
+
+.mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border-default);
+  flex-shrink: 0;
+}
+
+.mobile-drawer-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-50);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-drawer-close:hover {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-900);
+}
+
+.mobile-drawer-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-drawer-body {
+  padding: var(--space-4) var(--space-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: var(--space-1);
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  font-family: var(--font-family-sans);
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-1);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.is-active {
+  color: var(--color-primary-600);
+}
+
+.mobile-accordion-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-600);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.mobile-accordion-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-base);
+}
+
+.mobile-nav-item.is-expanded .mobile-accordion-toggle svg {
+  transform: rotate(180deg);
+}
+
+.mobile-nav-item.is-expanded .mobile-accordion-toggle {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+.mobile-sub-menu {
+  display: none;
+  flex-direction: column;
+  padding: var(--space-1) 0 var(--space-3) var(--space-3);
+  gap: var(--space-1);
+}
+
+.mobile-nav-item.is-expanded .mobile-sub-menu {
+  display: flex;
+}
+
+.mobile-sub-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  font-size: var(--font-size-small);
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.mobile-sub-link:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-primary-50);
+}
+
+.mobile-drawer-footer {
+  padding: var(--space-5);
+  border-top: 1px solid var(--color-border-default);
+  background-color: var(--color-neutral-50);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.mobile-contact-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  min-height: 44px;
+  background-color: var(--color-neutral-0);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.mobile-contact-pill:hover {
+  border-color: var(--color-primary-300);
+  color: var(--color-primary-700);
+}
+
+.mobile-contact-pill svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-primary-600);
+}
+
+/* -------------------------------------------------------------------------
+   NAV BEHAVIOUR — set by js/navigation.js after a navigation click so a
+   dropdown under a still-hovering pointer closes instead of lingering.
+   ------------------------------------------------------------------------- */
+.nav-item.is-suppressed .nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

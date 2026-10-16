@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" aria-label="MC Royal Schools Crest">
+  <defs>
+    <!-- Royal Gradient -->
+    <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3D079" />
+      <stop offset="50%" stop-color="#C99738" />
+      <stop offset="100%" stop-color="#9E6F1F" />
+    </linearGradient>
+    <linearGradient id="crestPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C5295" />
+      <stop offset="100%" stop-color="#46255E" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.18" flood-color="#06070B" />
+    </filter>
+  </defs>
+
+  <!-- Outer Wreath / Circle Accent -->
+  <circle cx="50" cy="50" r="46" stroke="url(#crestGold)" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
+
+  <!-- Shield Body -->
+  <path d="M50 8 C68 8, 86 16, 86 36 C86 64, 50 90, 50 90 C50 90, 14 64, 14 36 C14 16, 32 8, 50 8 Z" 
+        fill="url(#crestPurple)" 
+        stroke="url(#crestGold)" 
+        stroke-width="3" 
+        filter="url(#subtleShadow)" />
+
+  <!-- Shield Inner Border -->
+  <path d="M50 13 C64 13, 80 19, 80 36 C80 59, 50 82, 50 82 C50 82, 20 59, 20 36 C20 19, 36 13, 50 13 Z" 
+        fill="none" 
+        stroke="url(#crestGold)" 
+        stroke-width="1" 
+        opacity="0.75" />
+
+  <!-- Royal Crown on Top -->
+  <g transform="translate(32, 18) scale(0.72)">
+    <path d="M2 18 L6 6 L14 14 L24 2 L34 14 L42 6 L46 18 Z" fill="url(#crestGold)" />
+    <!-- Jewels on Crown Points -->
+    <circle cx="6" cy="5" r="2" fill="#ffffff" />
+    <circle cx="24" cy="2" r="2.5" fill="#ffffff" />
+    <circle cx="42" cy="5" r="2" fill="#ffffff" />
+    <rect x="2" y="19" width="44" height="4" rx="1.5" fill="url(#crestGold)" />
+  </g>
+
+  <!-- Open Book of Wisdom / Knowledge in Center -->
+  <g transform="translate(30, 40) scale(0.8)">
+    <path d="M25 6 C18 2, 8 2, 2 6 L2 34 C8 30, 18 30, 25 34 C32 30, 42 30, 48 34 L48 6 C42 2, 32 2, 25 6 Z" 
+          fill="#FFFFFF" 
+          stroke="url(#crestGold)" 
+          stroke-width="1.5" />
+    <path d="M25 6 L25 34" stroke="url(#crestGold)" stroke-width="1.5" />
+    <!-- Book Lines -->
+    <line x1="7" y1="13" x2="20" y2="13" stroke="#8663A6" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="7" y1="18" x2="20" y2="18" stroke="#8663A6" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="7" y1="23" x2="17" y2="23" stroke="#8663A6" stroke-width="1.2" stroke-linecap="round"/>
+
+    <line x1="30" y1="13" x2="43" y2="13" stroke="#8663A6" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="30" y1="18" x2="43" y2="18" stroke="#8663A6" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="30" y1="23" x2="40" y2="23" stroke="#8663A6" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Monogram Initials "MC" -->
+  <text x="50" y="78" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="11" font-weight="800" fill="url(#crestGold)" text-anchor="middle" letter-spacing="1">MC</text>
+</svg>
