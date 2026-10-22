@@ -1,0 +1,91 @@
+/* Device frames drawn in CSS. Sizes are set inline by mockup.js. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 3200px; height: 2000px; overflow: hidden; }
+body { position: relative; font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+body.transparent { background: transparent; }
+
+.stage { position: absolute; inset: 0; }
+.bg-brand { background: url(../assets/brand-bg.png) center / cover no-repeat; }
+.bg-studio {
+  background:
+    radial-gradient(70% 60% at 50% 38%, #FFFFFF 0%, rgba(255,255,255,0) 70%),
+    linear-gradient(180deg, #F7F4EF 0%, #EFEAE3 100%);
+}
+.bg-dark {
+  background:
+    radial-gradient(55% 55% at 50% 42%, rgba(134,99,166,0.45) 0%, rgba(70,37,94,0.15) 45%, rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, #1A0F24 0%, #0C0711 100%);
+}
+
+/* Screen content + faint glass reflection */
+.screen { position: absolute; overflow: hidden; background: #000; }
+.screen img.shot { position: absolute; left: 0; width: 100%; display: block; }
+.screen::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(118deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.05) 34%, rgba(255,255,255,0) 34.2%, rgba(255,255,255,0) 100%);
+}
+
+/* ---------------- MacBook Pro (front view) ---------------- */
+.mbp { position: absolute; }
+.mbp .lid {
+  position: absolute; left: 0; top: 0;
+  background: #0A0A0C;
+  border-radius: var(--lid-r) var(--lid-r) 12px 12px;
+  box-shadow: 0 0 0 3px #B9BCC2, 0 0 0 4px #8E9197;
+}
+.mbp .lid::before { /* bezel inner sheen */
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  box-shadow: inset 0 0 0 2px #1C1C20;
+}
+.mbp .notch { position: absolute; background: #0A0A0C; z-index: 2; }
+.mbp .notch::after { /* camera */
+  content: ""; position: absolute; left: 50%; top: 42%; width: 9px; height: 9px; margin-left: -4.5px; margin-top: -4.5px;
+  border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2B3A55 0%, #0D1220 60%, #050608 100%);
+}
+.mbp .hinge {
+  position: absolute; border-radius: 0 0 10px 10px;
+  background: linear-gradient(180deg, #2A2B2F 0%, #4A4C52 50%, #1C1D20 100%);
+}
+.mbp .base {
+  position: absolute; border-radius: 6px 6px 40px 40px / 6px 6px 22px 22px;
+  background: linear-gradient(180deg, #F0F1F3 0%, #D9DBDF 18%, #C2C5CA 55%, #9A9DA3 88%, #7D8086 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -2px 3px rgba(0,0,0,0.18);
+}
+.mbp .base .lip {
+  position: absolute; left: 50%; top: 0; transform: translateX(-50%);
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(180deg, #A9ACB2 0%, #C9CCD1 100%);
+  box-shadow: inset 0 2px 3px rgba(0,0,0,0.18);
+}
+.ground-shadow { position: absolute; border-radius: 50%; pointer-events: none; }
+
+/* ---------------- iPhone 15 Pro ---------------- */
+.iphone { position: absolute; }
+.iphone .frame {
+  position: absolute; inset: 0; border-radius: var(--outer-r);
+  background: linear-gradient(135deg, #9C9893 0%, #E3E0DB 18%, #8A8681 38%, #CFCBC5 62%, #77736E 82%, #B9B5AF 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35), inset 0 0 0 3px rgba(0,0,0,0.25);
+}
+.iphone .bezel { position: absolute; background: #050506; border-radius: var(--bezel-r); }
+.iphone .screen { border-radius: var(--screen-r); background: #fff; }
+.iphone .island {
+  position: absolute; left: 50%; transform: translateX(-50%); background: #000; border-radius: 999px; z-index: 3;
+}
+.iphone .island::after { /* front camera */
+  content: ""; position: absolute; top: 50%; width: 30%; height: 0; padding-bottom: 0;
+}
+.iphone .island .cam {
+  position: absolute; top: 50%; border-radius: 50%; transform: translateY(-50%);
+  background: radial-gradient(circle at 35% 35%, #26324A 0%, #0B0F18 60%, #000 100%);
+}
+.iphone .btn {
+  position: absolute; border-radius: 3px;
+  background: linear-gradient(90deg, #6F6B66 0%, #D2CEC8 45%, #8C8883 100%);
+}
+.iphone .statusbar {
+  position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between;
+  background: #FFFFFF; color: #0F172A; font-weight: 600; letter-spacing: -0.01em; z-index: 2;
+}
+.iphone .statusbar .icons { display: flex; align-items: center; }
+.iphone .statusbar svg { display: block; }
+.iphone .home-indicator { position: absolute; left: 50%; transform: translateX(-50%); border-radius: 999px; background: rgba(15,23,42,0.85); z-index: 2; }
