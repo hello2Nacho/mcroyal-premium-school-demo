@@ -1,0 +1,124 @@
+{
+  "desktop": {
+    "width": 2880,
+    "height": 27954,
+    "tiles": [
+      {
+        "src": "desktop-tile-0.png",
+        "height": 4000
+      },
+      {
+        "src": "desktop-tile-1.png",
+        "height": 4000
+      },
+      {
+        "src": "desktop-tile-2.png",
+        "height": 4000
+      },
+      {
+        "src": "desktop-tile-3.png",
+        "height": 4000
+      },
+      {
+        "src": "desktop-tile-4.png",
+        "height": 4000
+      },
+      {
+        "src": "desktop-tile-5.png",
+        "height": 4000
+      },
+      {
+        "src": "desktop-tile-6.png",
+        "height": 3954
+      }
+    ],
+    "scale": 2,
+    "topbar": 39,
+    "headerHeight": 85,
+    "sections": {
+      "how-we-learn": 902,
+      "about": 2474.828125,
+      "admissions": 3553.53125,
+      "school-life": 4708.9375,
+      "academics": 5802.546875,
+      "facilities": 8164.375,
+      "our-staff": 9395.671875,
+      "secondary": 10523.75,
+      "graduation": 11553.546875,
+      "primary": 12304.515625,
+      "contact": 13174.390625
+    },
+    "pageHeight": 13977
+  },
+  "mobile": {
+    "width": 1170,
+    "height": 47346,
+    "tiles": [
+      {
+        "src": "mobile-tile-0.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-1.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-2.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-3.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-4.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-5.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-6.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-7.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-8.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-9.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-10.png",
+        "height": 4000
+      },
+      {
+        "src": "mobile-tile-11.png",
+        "height": 3346
+      }
+    ],
+    "scale": 3,
+    "topbar": 0,
+    "headerHeight": 69,
+    "sections": {
+      "how-we-learn": 845,
+      "about": 2176.953125,
+      "admissions": 3304.625,
+      "school-life": 4843.046875,
+      "academics": 5928.921875,
+      "facilities": 8988.09375,
+      "our-staff": 10276.21875,
+      "secondary": 11272.71875,
+      "graduation": 12326.0625,
+      "primary": 13385.90625,
+      "contact": 14429.578125
+    },
+    "pageHeight": 15782
+  }
+}
